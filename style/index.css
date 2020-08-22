@@ -2,7 +2,7 @@
     font-family: 'Inter', sans-serif;
   }
  header {
-      background-image: url(./bg.png);
+      background-image: url(../images/bg.png);
       /* background-position: center; */
       background-position: top;
       background-size: cover;
