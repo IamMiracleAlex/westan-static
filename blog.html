@@ -47,12 +47,12 @@
   <body>
     <!-- Main navbar -->
     <div class="border-bottom">
-        <header class="blog-header container py-3">
+        <header class="blog-header container py-2">
             <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                <a class="text-muted p-2" href="#">Subscribe</a>
-                <a class="text-muted p-2" href="#">Subscribe</a>
-                <a class="text-muted p-2" href="#">Subscribe</a>
+                <a class="text-muted p-2" href="/blog.html">Blog</a>
+                <a class="text-muted p-2" href="/listings.html">Find Properties</a>
+                <a class="text-muted p-2" href="/index.html">Back to Westan</a>
             </div>
             <div class="col-4 text-center">
                 <a class="navbar-brand" href="#">
@@ -72,31 +72,52 @@
 
     <!-- Sliding Navbar -->
     <div class="border-bottom shadow-sm">
-        <div class="nav-scroller container py-1 mb-2">
-            <nav class="nav d-flex justify-content-betwee">
-            <a class="p-2 text-muted" href="#">World</a>
-            <a class="p-2 text-muted" href="#">U.S.</a>
-            <a class="p-2 text-muted" href="#">Technology</a>
-            <a class="p-2 text-muted" href="#">Design</a>
+        <div class="nav-scroller container py-1 mb-1">
+            <nav class="nav d-flex justify-content-betwee align-items-cente>
+                <span class="nav d-block">
+            <a class="p-2 text-muted" href="#">Trending</a>
+            <a class="p-2 text-muted" href="#">Real Estate News</a>
+            <a class="p-2 text-muted" href="#">Home Decoration</a>
+            <a class="p-2 text-muted" href="#">Market Trends</a>
+            <a class="p-2 text-muted" href="#">Lifestyle</a>
             <a class="p-2 text-muted" href="#">Culture</a>
-            <a class="p-2 text-muted" href="#">Business</a>
-            <a class="p-2 text-muted" href="#">Politics</a>
-            <a class="p-2 text-muted" href="#">Opinion</a>
-            <a class="p-2 text-muted" href="#">Science</a>
-            <a class="p-2 text-muted" href="#">Health</a>
-            <a class="p-2 text-muted" href="#">Style</a>
-            <a class="p-2 text-muted" href="#">Travel</a>
+            <a class="p-2 text-muted" href="#">Politics</a></span>
+            <span class="text-center ml-auto mt-1 py-md-0">
+                <a class="p-2" href="http://">
+                    <img src="./images/facebook.svg" alt="facebook link">
+                </a>
+                <a class="p-2" href="http://">
+                    <img src="./images/instagram.svg" alt="instagram link">
+                </a>
+                <a class="p-2" href="http://">
+                    <img src="./images/linkedin.svg" alt="linkedin link">
+                </a>
+            </span>
             </nav>
         </div>
     </div>
 
         <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-            <div class="col-md-6 px-0">
-            <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-            <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-            <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+            <div class="col-md-6 px-0 pt-5">
+                <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+                <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+                <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
             </div>
         </div>
+
+        <div class="card shadow-sm bg-white text-dark text-white" style="min-width: 18rem;">
+            <img class="card-img" src="./images/posts/post.png" height="250" alt="Card image">
+            <div class="card-img-overlay d-flex flex-column-reverse">
+              <div class="bg-light w-100">
+                  <h5 class="mt-auto price rounded text-white">News</h5>
+                  <h4 class="card-title"><strong>Looking for a New Place? Use This Time to Create Your Wishlist</strong></h4>
+                  <p class="card-text">Drake Oyle, Jun 21, 2019</p>
+                  <small class="text-muted mb-0 d-flex justify-content-between">
+                      Drake Oyle, Jun 21, 2019
+                  </small>
+              </div>
+            </div>
+          </div>
 
     <main role="main" class="container">
         <div class="row mb-2">
@@ -115,6 +136,22 @@
                 </div>
             </div>
             <div class="col-md-4">
+                <div class="card shadow-sm bg-white text-dark text-white" style="min-width: 18rem;">
+                  <img class="card-img" src="./images/posts/post.png" alt="Card image">
+                  <div class="card-img-overlay d-flex flex-column-reverse">
+                    <div class="bg-light">
+                        <h5 class="mt-auto price rounded text-white">News</h5>
+                        <h4 class="card-title"><strong>Looking for a New Place? Use This Time to Create Your Wishlist</strong></h4>
+                        <p class="card-text">Drake Oyle, Jun 21, 2019</p>
+                        <small class="text-muted mb-0 d-flex justify-content-between">
+                            Drake Oyle, Jun 21, 2019
+                        </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+            <div class="col-md-4">
                 <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
                     <strong class="d-inline-block mb-2 text-success">Design</strong>
@@ -143,14 +180,83 @@
                 </div>
             </div>
         </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center mt-5">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Prev</a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
     </main>
 
 
-        <footer class="blog-footer">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-        <p>
-            <a href="#">Back to top</a>
-        </p>
+        <!-- FOOTER -->
+        <footer class="bg-light mt-md-5">
+            <div class="row container py-4 py-md-5 mx-auto">
+            <div class="col-6 col-md">
+                <img class="d-block mb-3" src="./images/Westan Logo.svg" alt="">
+                <span class="text-center py-md-0">
+                    <a class="pr-2" href="http://">
+                        <img src="./images/facebook.svg" alt="facebook link">
+                    </a>
+                    <a class="pr-2" href="http://">
+                        <img src="./images/instagram.svg" alt="instagram link">
+                    </a>
+                    <a class="pr-2" href="http://">
+                        <img src="./images/linkedin.svg" alt="linkedin link">
+                    </a>
+                </span>
+            </div>
+            <div class="col-6 col-md">
+                <h5 class="text-uppercase">top links</h5>
+                <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Blog</a></li>
+                <li><a class="text-muted" href="#">Find Properties</a></li>
+                <li><a class="text-muted" href="#">Back to Westan</a></li>
+                <li><a class="text-muted" href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5 class="text-uppercase">top categories</h5>
+                <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Trending</a></li>
+                <li><a class="text-muted" href="#">Real Estate News</a></li>
+                <li><a class="text-muted" href="#">Market Trends</a></li>
+                <li><a class="text-muted" href="#">Lifestyle</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-5">
+                <h5 class="text-uppercase">subscribe</h5>
+                <form>
+                <div class="form-md-row align-items-center">
+                    <div class="my-1">
+                    <label class="sr-only" for="inlineFormInputName">Email</label>
+                    <input type="email" class="form-control bg-white" id="inlineFormInputName" placeholder="Email address">
+                    </div>
+                    <div class="w-25 my-1">
+                    <button type="submit" class="btn btn-primary border-0 rounded">Submit</button>
+                    </div>
+                </div>
+                </form>
+                <small class="d-none d-md-block"> Get updates on latest real estate trends
+        
+                </small>
+            </div>
+            </div>
+        
+            <div class="bg-dark text-center text-white py-2 py-md-3">
+                <span class="container ">&copy; 2020 Westan Realtors. All rights reserved.</span> 
+                
+            </div>
         </footer>
+  
     </body>
     </html>
