@@ -12,6 +12,10 @@
     <!-- Bootstrap core CSS -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -24,6 +28,13 @@
 
 
     <style>
+
+        .post .card img {
+            height: 450px;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -95,18 +106,16 @@
     <main role="main" class="container mt-5">
         <div class="row">
             <!-- blog-main col -->
-            <div class="col-md-8 blog-main">
+            <div class="post col-md-8 blog-main">
+
                 <!-- Post Image -->
-                <div class="card shadow-sm bg-white text-dark text-white" style="min-width: 18rem;">
-                    <img class="card-img" src="./images/posts/post.png" height="450" alt="Card image">
+                <div class="card shadow-sm bg-dark text-white text-white border-0 mb-5" style="min-width: 18rem;">
+                    <img class="card-img" src="./images/posts/post.png" alt="Card image">
                     <div class="card-img-overlay d-flex flex-column-reverse">
-                      <div class="bg-light w-100">
+                      <div class="">
                           <h5 class="mt-auto price rounded text-white">News</h5>
                           <h4 class="card-title"><strong>Looking for a New Place? Use This Time to Create Your Wishlist</strong></h4>
                           <p class="card-text">Drake Oyle, Jun 21, 2019</p>
-                          <small class="text-muted mb-0 d-flex justify-content-between">
-                              Drake Oyle, Jun 21, 2019
-                          </small>
                       </div>
                     </div>
                   </div>
@@ -154,22 +163,22 @@
                 <div class="comments">
                     <h1>Comments</h1>
                    <ul class="list-unstyled">
-                    <li class="media">
-                      <img src="..." class="mr-3" alt="...">
+                    <li class="media my-4 border p-3 rounded">
+                      <img src="./images/posts/comment.png" class="mr-3" alt="...">
                       <div class="media-body">
                         <h5 class="mt-0 mb-1">List-based media object</h5>
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                       </div>
                     </li>
-                    <div class="media">
-                        <img src="..." class="mr-3" alt="...">
+                    <div class="media my-4 border p-3 rounded">
+                        <img src="./images/posts/comment.png" class="mr-3" alt="...">
                         <div class="media-body">
                           <h5 class="mt-0">Media heading</h5>
                           Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                       
                           <div class="media mt-3">
                             <a class="mr-3" href="#">
-                              <img src="..." class="mr-3" alt="...">
+                              <img src="./images/posts/comment.png" class="mr-3" alt="...">
                             </a>
                             <div class="media-body">
                               <h5 class="mt-0">Media heading</h5>
@@ -178,15 +187,15 @@
                           </div>
                         </div>
                     </div>
-                    <li class="media my-4">
-                      <img src="..." class="mr-3" alt="...">
+                    <li class="media my-4 border p-3 rounded">
+                      <img src="./images/posts/comment.png" class="mr-3" alt="...">
                       <div class="media-body">
                         <h5 class="mt-0 mb-1">List-based media object</h5>
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                       </div>
                     </li>
-                    <li class="media">
-                      <img src="..." class="mr-3" alt="...">
+                    <li class="media my-4 border p-3 rounded">
+                      <img src="./images/posts/comment.png" class="mr-3" alt="...">
                       <div class="media-body">
                         <h5 class="mt-0 mb-1">List-based media object</h5>
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
@@ -197,25 +206,25 @@
 
 
                 <!-- Write post -->
-                <div class="write-comment">
+                <div class="write-comment my-5">
                     <h1>Write a response</h1>
                     <form class="comment-form border p-4 p-md-5">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Your name">
+                                <input type="text" class="form-control bg-light" id="name" placeholder="Your name">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="email@me.com">
+                                <input type="email" class="form-control bg-light" id="inputEmail4" placeholder="email@me.com">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputAddress">Response</label>
-                            <!-- <input type="text" class="form-control" id="inputAddress"> -->
-                            <textarea class="form-control w-100" name="" id="inputAddress" cols="30" rows="5" placeholder="Write your response here"></textarea>
+                            <!-- <input type="text" class="form-control bg-light" id="inputAddress"> -->
+                            <textarea class="form-control bg-light w-100" name="" id="inputAddress" cols="30" rows="5" placeholder="Write your response here"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
+                        <button type="submit" class="btn btn-primary w-100">POST RESPONSE</button>
                     </form>
                 </div>
                 
@@ -226,100 +235,100 @@
 
             <!-- /.blog-sidebar -->
             <aside class="col-md-4 blog-sidebar">
-                <li class="media">
-                    <img src="..." class="mr-3" alt="...">
-                    <div class="media-body">
-                      <h5 class="mt-0 mb-1">List-based media object st-based media object</h5>
-                      Cras sit amet nibh libero, in gravida nulla..
-                    </div>
-                  </li>
 
+                <!-- Author -->
                 <div class="card shadow-sm bg-white text-dark text-white" style="min-width: 18rem;">
-                    <img class="card-img" src="./images/posts/post.png" height="250" alt="Card image">
-                    <div class="card-img-overlay d-flex flex-column-reverse">
-                      <div class="bg-light w-100">
-                          <h5 class="mt-auto price rounded text-white">News</h5>
-                          <h4 class="card-title"><strong>Looking for a New Place? Use This Time to Create Your Wishlist</strong></h4>
-                          <p class="card-text">Drake Oyle, Jun 21, 2019</p>
-                          <small class="text-muted mb-0 d-flex justify-content-between">
-                              Drake Oyle, Jun 21, 2019
-                          </small>
-                      </div>
-                    </div>
+                    <img class="card-img" src="./images/posts/author.png" height="350" alt="Card image">
                 </div>
-                
-                <div class="p-4 my-3 bg-light rounded">
-                    <h4 class="font-italic">About</h4>
-                    <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                <p class="my-4"><strong>Drake Oyle</strong>  is an author with an eye for the classics, an architect and an alumni of the Harvard Institute of Architecture.</p>
+
+                <!-- Similar posts -->
+                <div class="my-4">Similar Posts
+                    <li class="media row my-3">
+                        <img src="./images/posts/post.png" class="col-4 mx-0" height="100" alt="Small post">
+                        <div class="media-body col-8">
+                        <h5 class="mt-0 mb-1">31 Ways to Decorate your new Home by yourself</h5>
+                        Drake Oyle, Jun 21, 2019
+                        </div>
+                    </li>
+                    <li class="media row my-3">
+                        <img src="./images/posts/post.png" class="col-4 mx-0" height="100" alt="Small post">
+                        <div class="media-body col-8">
+                        <h5 class="mt-0 mb-1">31 Ways to Decorate your new Home by yourself</h5>
+                        Drake Oyle, Jun 21, 2019
+                        </div>
+                    </li>
+                    <li class="media row my-3">
+                        <img src="./images/posts/post.png" class="col-4 mx-0" height="100" alt="Small post">
+                        <div class="media-body col-8">
+                        <h5 class="mt-0 mb-1">31 Ways to Decorate your new Home by yourself</h5>
+                        Drake Oyle, Jun 21, 2019
+                        </div>
+                    </li>
                 </div>
 
-                <div class="p-4">
-                    <h4 class="font-italic">Elsewhere</h4>
-                    <ol class="list-unstyled">
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    </ol>
-                </div>
+
 
                 <!-- Property Cards -->
-                <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
-                    <img class="card-img" src="./images/listing.png" alt="Card image">
-                    <div class="card-img-overlay d-flex justify-content-between">
-                      <p></p>
-                      <h5 class="price rounded text-white">$78,096</h5>
+                <div class="my-4">Featured Properties
+                    <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
+                        <img class="card-img" src="./images/listing.png" alt="Card image">
+                        <div class="card-img-overlay d-flex justify-content-between">
+                        <p></p>
+                        <h5 class="price rounded text-white">$78,096</h5>
+                        </div>
+                        <div class="card-body">
+                        <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
+                        <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
+                        </div>
+                        <div class="card-footer">
+                        <small class="text-muted mb-0 d-flex justify-content-between">
+                            <span>10 Rooms</span>
+                            <span>5 Baths</span>
+                            <span>7 Bathrooms</span>
+                            <span>678m<sup>2</sup></span>
+                        </small>
+                        </div>
                     </div>
-                    <div class="card-body">
-                      <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
-                      <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
+                    <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
+                        <img class="card-img" src="./images/listing.png" alt="Card image">
+                        <div class="card-img-overlay d-flex justify-content-between">
+                        <p></p>
+                        <h5 class="price rounded text-white">$78,096</h5>
+                        </div>
+                        <div class="card-body">
+                        <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
+                        <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
+                        </div>
+                        <div class="card-footer">
+                        <small class="text-muted mb-0 d-flex justify-content-between">
+                            <span>10 Rooms</span>
+                            <span>5 Baths</span>
+                            <span>7 Bathrooms</span>
+                            <span>678m<sup>2</sup></span>
+                        </small>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                      <small class="text-muted mb-0 d-flex justify-content-between">
-                        <span>10 Rooms</span>
-                        <span>5 Baths</span>
-                        <span>7 Bathrooms</span>
-                        <span>678m<sup>2</sup></span>
-                      </small>
+                    <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
+                        <img class="card-img" src="./images/listing.png" alt="Card image">
+                        <div class="card-img-overlay d-flex justify-content-between">
+                        <p></p>
+                        <h5 class="price rounded text-white">$78,096</h5>
+                        </div>
+                        <div class="card-body">
+                        <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
+                        <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
+                        </div>
+                        <div class="card-footer">
+                        <small class="text-muted mb-0 d-flex justify-content-between">
+                            <span>10 Rooms</span>
+                            <span>5 Baths</span>
+                            <span>7 Bathrooms</span>
+                            <span>678m<sup>2</sup></span>
+                        </small>
+                        </div>
                     </div>
-                  </div>
-                  <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
-                    <img class="card-img" src="./images/listing.png" alt="Card image">
-                    <div class="card-img-overlay d-flex justify-content-between">
-                      <p></p>
-                      <h5 class="price rounded text-white">$78,096</h5>
-                    </div>
-                    <div class="card-body">
-                      <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
-                      <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-muted mb-0 d-flex justify-content-between">
-                        <span>10 Rooms</span>
-                        <span>5 Baths</span>
-                        <span>7 Bathrooms</span>
-                        <span>678m<sup>2</sup></span>
-                      </small>
-                    </div>
-                  </div>
-                  <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
-                    <img class="card-img" src="./images/listing.png" alt="Card image">
-                    <div class="card-img-overlay d-flex justify-content-between">
-                      <p></p>
-                      <h5 class="price rounded text-white">$78,096</h5>
-                    </div>
-                    <div class="card-body">
-                      <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
-                      <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-muted mb-0 d-flex justify-content-between">
-                        <span>10 Rooms</span>
-                        <span>5 Baths</span>
-                        <span>7 Bathrooms</span>
-                        <span>678m<sup>2</sup></span>
-                      </small>
-                    </div>
-                  </div>
+                  </div>  
 
             </aside><!-- /.blog-sidebar -->
 
