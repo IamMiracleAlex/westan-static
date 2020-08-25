@@ -107,9 +107,20 @@
     object-fit: cover;
   }
 
+  .pagination li {
+    margin: 5px !important;
+    border-radius: 4px !important;
 
-  main {
-    /* padding: 0 10rem; */
+  }
+  .pagination li a {
+    color: #003330 !important;
+    background-color: #EBF5F7;
+    font-size: medium;
+  }
+  .pagination .active a {
+    color: #EBF5F7 !important;
+    background-color: #003330 !important;
+    border: 0;
   }
   
   footer {

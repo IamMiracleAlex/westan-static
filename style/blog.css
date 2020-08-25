@@ -10,19 +10,11 @@
   }
 
   
-  
-  .blog-header-logo {
-    font-family: 'Inter', sans-serif;
-    font-size: 2.25rem;
-  }
-  
-  .blog-header-logo:hover {
-    text-decoration: none;
-  }
-  
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', sans-serif;
   }
+
+  
   
   .display-4 {
     font-size: 2.5rem;
@@ -134,40 +126,25 @@
     .h-md-250 { height: 250px; }
   }
   
-  /* Pagination */
-  .blog-pagination {
-    margin-bottom: 4rem;
+  .pagination li {
+    margin: 5px !important;
+    border-radius: 4px !important;
+
   }
-  .blog-pagination > .btn {
-    border-radius: 2rem;
+  .pagination li a {
+    color: #003330 !important;
+    background-color: #EBF5F7;
+    font-size: medium;
   }
-  
-  /*
-   * Blog posts
-   */
-  .blog-post {
-    margin-bottom: 4rem;
+  .pagination .active a {
+    color: #EBF5F7 !important;
+    background-color: #003330 !important;
+    border: 0;
   }
-  .blog-post-title {
-    margin-bottom: .25rem;
-    font-size: 2.5rem;
-  }
-  .blog-post-meta {
-    margin-bottom: 1.25rem;
-    color: #999;
+
+  .signup {
+    background-color: #fc8210;
+    border: 0;
   }
   
-  /*
-   * Footer
-   */
-  .blog-footer {
-    padding: 2.5rem 0;
-    color: #999;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-top: .05rem solid #e5e5e5;
-  }
-  .blog-footer p:last-child {
-    margin-bottom: 0;
-  }
   
