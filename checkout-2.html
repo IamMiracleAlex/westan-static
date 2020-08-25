@@ -85,70 +85,47 @@
 
     <div class="text-center mb-5">
         <p class="h1"><strong>Confirmation Form</strong> </p>
-        <p class="h3 col-12 col-md-6 mx-auto">Upload bank teller or transfer screenshot and enter your transaction details to confirm payment.</p>
+        <p class="h3 col-12 col-md-6 mx-auto text-secondary">Upload bank teller or transfer screenshot and enter your transaction details to confirm payment.</p>
     </div>
-
-
 
       <form class="auth signup-for col-12 col-md-7 mx-auto border p-5 needs-validation rounded mb-5 pb-5 bg-white text-center" novalidate>
           <p class="text-center h4 mb-3 mb-md-5"><strong>Transaction Details</strong> </p>
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control px-3" id="validationCustom01" placeholder="Firstname" required>
-            <div class="invalid-feedback">
-                Please enter your first name.
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control px-3" id="validationCustom02" placeholder="Lastname" required>
-            <div class="invalid-feedback">
-                Please enter your last name.
-            </div>
-          </div>
-        </div>
-        <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <input type="number" class="form-control px-3" id="validationCustom01" placeholder="Phone number" required>
-              <div class="invalid-feedback">
-                  Please enter your phone number.
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <input type="email" class="form-control px-3" id="validationCustom02" placeholder="Email address" required>
-              <div class="invalid-feedback">
-                  Please enter a valid email address.
-              </div>
-            </div>
-          </div>
           <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <input type="password" class="form-control px-3" id="validationCustom01" placeholder="Password" required>
-              <div class="invalid-feedback">
-                  Please choose a password.
+            <div class="col-md-6 form-col px-3">
+              <div class="w-100 mb-3">
+                <input type="text" class="form-control px-3" id="validationCustom02" placeholder="Confirm password" required>
+                <div class="invalid-feedback">
+                    Password does not match.
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-control border py-5 h-100">
+                  <button class="btn btn-dark">Upload Teller Image</button>
+                </div>
               </div>
             </div>
-            <div class="col-md-6 mb-3">
-              <input type="password" class="form-control px-3" id="validationCustom02" placeholder="Confirm password" required>
-              <div class="invalid-feedback">
-                  Password does not match.
+            <div class="col-md-6 form-col px-3">
+              <div class="mb-3">
+                <input type="text" class="form-control px-3" id="validationCustom01" placeholder="Firstname" required>
+                <div class="invalid-feedback">
+                    Please enter your first name.
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <input type="text" class="form-control px-3" id="validationCustom01" placeholder="Referral code/name (Optional)">
-            </div>
-            <div class="form-group col-md-6 py-auto">
-              <button class="signup btn btn-primary w-100 mb-1 mx-auto" type="submit">Sign Up</button>
+              <div class="mb-3">
+                <input type="text" class="form-control px-3" id="validationCustom02" placeholder="Lastname" required>
+                <div class="invalid-feedback">
+                    Please enter your last name.
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control px-3" id="validationCustom01" placeholder="Referral code/name (Optional)">
+              </div>
+              <div class="form-group py-auto">
+                <button class="signup btn btn-primary w-100 mb-1 mx-auto" type="submit">Sign Up</button>
+              </div>
             </div>
           </div>
           
-          
-        <button class="signup btn btn-primary col-md-6 mb-1 mx-auto" type="submit">Sign Up</button>
-        <br>
-        <small>
-            Have an account? <a href="http://">Login</a> 
-        </small>
       </form>
 
       <div class="py-5"></div>

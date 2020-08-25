@@ -1,346 +1,477 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Westan Blog</title>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Single Blog Page</title>
 
 
-    <!-- Bootstrap core CSS -->
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+  <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#563d7c">
 
 
-    <style>
+  <style>
+    .post .card img {
+      height: 450px;
+      object-fit: cover;
+      opacity: 0.6;
+    }
 
-        .post .card img {
-            height: 450px;
-            object-fit: cover;
-            opacity: 0.6;
-        }
+    .card .price {
+    padding: 5px 13px !important;
+    background-color: rgba(0, 0, 0, 0.555);
+    width: min-content;
+    height: min-content;
+  }
 
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="./style/blog.css" rel="stylesheet">
+</head>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="./style/blog.css" rel="stylesheet">
-  </head>
-  <body>
-    <!-- Main navbar -->
-    <div class="border-bottom">
-        <header class="blog-header container py-3">
-            <div class="row flex-nowrap justify-content-between align-items-center">
-            <div class="col-4 pt-1">
-                <a class="text-muted p-2" href="#">Subscribe</a>
-                <a class="text-muted p-2" href="#">Subscribe</a>
-                <a class="text-muted p-2" href="#">Subscribe</a>
-            </div>
-            <div class="col-4 text-center">
-                <a class="navbar-brand" href="#">
-                    <img src="./images/Westan Logo.svg" alt="Westan Logo" srcset="">
-                </a>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-end align-items-center">
-                <a class="text-muted" href="#" aria-label="Search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
-                </a>
-                <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
-            </div>
-            </div>
-        </header>
-    </div>
-
-    <!-- Sliding Navbar -->
-    <div class="border-bottom shadow-sm">
-        <div class="nav-scroller container py-1 mb-2">
-            <nav class="nav d-flex justify-content-betwee">
-            <a class="p-2 text-muted" href="#">World</a>
-            <a class="p-2 text-muted" href="#">U.S.</a>
-            <a class="p-2 text-muted" href="#">Technology</a>
-            <a class="p-2 text-muted" href="#">Design</a>
-            <a class="p-2 text-muted" href="#">Culture</a>
-            <a class="p-2 text-muted" href="#">Business</a>
-            <a class="p-2 text-muted" href="#">Politics</a>
-            <a class="p-2 text-muted" href="#">Opinion</a>
-            <a class="p-2 text-muted" href="#">Science</a>
-            <a class="p-2 text-muted" href="#">Health</a>
-            <a class="p-2 text-muted" href="#">Style</a>
-            <a class="p-2 text-muted" href="#">Travel</a>
-            </nav>
+<body>
+  <!-- Main navbar -->
+  <div class="border-bottom">
+    <header class="blog-header container py-2">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1 d-none d-md-block">
+          <a class="text-muted p-2" href="/blog.html">Blog</a>
+          <a class="text-muted p-2" href="/listings.html">Find Properties</a>
+          <a class="text-muted p-2" href="/index.html">Back to Westan</a>
         </div>
+        <div class="col-4 text-center">
+          <a class="navbar-brand" href="#">
+            <img src="./images/Westan Logo.svg" alt="Westan Logo" srcset="">
+          </a>
+        </div>
+
+        <div class="col-6 col-md-4 pt-2 d-flex justify-content-end align-items-center rounded">
+          <label class="sr-only" for="inlineFormInputGroup">Username</label>
+          <div class="input-group mb-2">
+            <input type="text" class="form-control border-right-0" id="inlineFormInputGroup" placeholder="Search">
+            <div class="input-group-prepend">
+              <div class="input-group-text bg-white border-left-0 rounded" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-1" role="img"
+                  viewBox="0 0 24 24" focusable="false">
+                  <title>Search</title>
+                  <circle cx="10.5" cy="10.5" r="7.5" />
+                  <path d="M21 21l-5.2-5.2" />
+                </svg>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </header>
+  </div>
+
+  <!-- Sliding Navbar -->
+  <div class="border-bottom shadow-sm">
+    <div class="nav-scroller container py-1 mb-1">
+      <nav class="nav d-flex justify-content-betwee align-items-cente>
+                  <span class=" nav d-block">
+        <a class="p-2 text-muted" href="#">Trending</a>
+        <a class="p-2 text-muted" href="#">Real Estate News</a>
+        <a class="p-2 text-muted" href="#">Home Decoration</a>
+        <a class="p-2 text-muted" href="#">Market Trends</a>
+        <a class="p-2 text-muted" href="#">Lifestyle</a>
+        <a class="p-2 text-muted" href="#">Culture</a>
+        <a class="p-2 text-muted" href="#">Politics</a></span>
+        <span class="text-center ml-auto mt-1 py-md-0">
+          <a class="p-2" href="http://">
+            <img src="./images/facebook.svg" alt="facebook link">
+          </a>
+          <a class="p-2" href="http://">
+            <img src="./images/instagram.svg" alt="instagram link">
+          </a>
+          <a class="p-2" href="http://">
+            <img src="./images/linkedin.svg" alt="linkedin link">
+          </a>
+        </span>
+      </nav>
+    </div>
+  </div>
+
+
+
+
+  <main role="main" class="container mt-5">
+    <div class="row">
+      <!-- blog-main col -->
+      <div class="post col-md-8 blog-main">
+
+        <!-- Post Image -->
+        <div class="card shadow-sm bg-dark text-white text-white border-0 mb-5" style="min-width: 18rem;">
+          <img class="card-img" src="./images/posts/post.png" alt="Card image">
+          <div class="card-img-overlay d-flex flex-column-reverse">
+            <div class="px-3">
+              <span class="category mt-auto price rounded text-white bg-danger pb-2 px-2"><small
+                  class="p-2 font-weight-bold">News</small></span>
+              <h4 class="card-title mt-3 w-75"><strong>Looking for a New Place? Use This Time to Create Your
+                  Wishlist</strong></h4>
+              <p class="card-text">Drake Oyle, Jun 21, 2019</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog post -->
+        <div class="blog-post">
+          <h2 class="blog-post-title">Sample blog post</h2>
+          <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+
+          <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic
+            typography, images, and code are all supported.</p>
+          <hr>
+          <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est
+            at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+          <blockquote>
+            <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu
+              leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          </blockquote>
+          <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum.
+            Aenean lacinia bibendum nulla sed consectetur.</p>
+          <h2>Heading</h2>
+          <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus,
+            nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac,
+            vestibulum at eros.</p>
+          <h3>Sub-heading</h3>
+          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          <pre><code>Example code block</code></pre>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
+            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+          <h3>Sub-heading</h3>
+          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia
+            bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <ul>
+            <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+            <li>Donec id elit non mi porta gravida at eget metus.</li>
+            <li>Nulla vitae elit libero, a pharetra augue.</li>
+          </ul>
+          <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+          <ol>
+            <li>Vestibulum id ligula porta felis euismod semper.</li>
+            <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+            <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+          </ol>
+          <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+        </div>
+
+        <p class="my-4 d-block d-md-none"><strong>Drake Oyle</strong> is an author with an eye for the classics, an
+          architect and an alumni of the Harvard Institute of Architecture.</p>
+
+        <!-- /.blog-post -->
+
+        <!-- Comments -->
+        <div class="comments">
+          <h1>Comments</h1>
+          <ul class="list-unstyled">
+            <li class="media my-4 border p-3 rounded">
+              <img src="./images/posts/comment.png" class="mr-3" alt="...">
+              <div class="media-body">
+                <strong>Cras:</strong> sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
+                odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                fringilla. Donec lac. 
+                <br>
+                <small>
+                  <span class="text-muted mr-3">4 months ago</span>
+                  <a href="" class="text-secondary"><img src="./images/posts/reply.svg" alt=""> Reply</a>
+                </small>
+              </div>
+            </li>
+            <div class="media my-4 border p-3 rounded">
+              <img src="./images/posts/comment.png" class="mr-3" alt="...">
+              <div class="media-body">
+                <strong>Cras:</strong> sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
+                odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                fringilla. Donec lacinia congue felis in faucibus.
+                <br>
+                <small>
+                  <span class="text-muted mr-3">4 months ago</span>
+                  <a href="" class="text-secondary"><img src="./images/posts/reply.svg" alt=""> Reply</a>
+                </small>
+                <div class="media mt-3">
+                  <a class="mr-3" href="#">
+                    <img src="./images/posts/comment.png" class="mr-3" alt="...">
+                  </a>
+                  <div class="media-body">
+                    <strong>Cras:</strong> sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
+                    purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi
+                    vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    <br>
+                    <small>
+                      <span class="text-muted mr-3">4 months ago</span>
+                      <a href="" class="text-secondary"><img src="./images/posts/reply.svg" alt=""> Reply</a>
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <li class="media my-4 border p-3 rounded">
+              <img src="./images/posts/comment.png" class="mr-3" alt="...">
+              <div class="media-body">
+                <strong>Cras:</strong> sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
+                odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                fringilla. Donec lacinia congue felis in faucibus.
+                <br>
+                <small>
+                  <span class="text-muted mr-3">4 months ago</span>
+                  <a href="" class="text-secondary"><img src="./images/posts/reply.svg" alt=""> Reply</a>
+                </small>
+              </div>
+            </li>
+            <li class="media my-4 border p-3 rounded">
+              <img src="./images/posts/comment.png" class="mr-3" alt="...">
+              <div class="media-body">
+                <strong>Cras:</strong> sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
+                odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                fringilla. Donec lacinia congue felis in faucibus.
+                <br>
+                <small>
+                  <span class="text-muted mr-3">4 months ago</span>
+                  <a href="" class="text-secondary"><img src="./images/posts/reply.svg" alt=""> Reply</a>
+                </small>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- Write post -->
+        <div class="write-comment my-5">
+          <h1>Write a response</h1>
+          <form class="comment-form border p-4 p-md-5">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="name">Name</label>
+                <input type="text" class="form-control bg-light" id="name" placeholder="Your name">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control bg-light" id="inputEmail4" placeholder="email@me.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Response</label>
+              <!-- <input type="text" class="form-control bg-light" id="inputAddress"> -->
+              <textarea class="form-control bg-light w-100" name="" id="inputAddress" cols="30" rows="5"
+                placeholder="Write your response here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary w-100">POST RESPONSE</button>
+          </form>
+        </div>
+
+
+
+      </div>
+      <!-- /.blog-main -->
+
+      <!-- Blog sidebar -->
+      <aside class="col-md-4 blog-sidebar">
+
+        <!-- Author -->
+        <div class="card shadow-sm bg-white text-dark text-white d-none d-md-block" style="min-width: 18rem;">
+          <img class="card-img" src="./images/posts/author.png" height="350" alt="Card image">
+        </div>
+        <p class="my-4 d-none d-md-block"><strong>Drake Oyle</strong> is an author with an eye for the classics, an
+          architect and an alumni of the Harvard Institute of Architecture.</p>
+
+        <!-- Similar posts -->
+        <div class="my-5">
+          <span class="category mt-auto price rounded text-white bg-secondary py-1 pb-2 px-2"><small
+            class="p-2 font-weight-bold">Similar Posts </small></span>
+          <li class="media row my-4">
+            <img src="./images/posts/post.png" class="col-4 mx-0" height="75" alt="Small post">
+            <div class="media-body col-8">
+              <h6 class="mt-0 mb-1"><a href="#" class="stretched-link"></a>31 Ways to Decorate your new Home by yourself</h6>
+              Drake Oyle, Jun 21, 2019
+            </div>
+          </li>
+          <li class="media row my-3">
+            <img src="./images/posts/post.png" class="col-4 mx-0" height="75" alt="Small post">
+            <div class="media-body col-8">
+              <h6 class="mt-0 mb-1"><a href="#" class="stretched-link"></a>31 Ways to Decorate your new Home by yourself</h6>
+              Drake Oyle, Jun 21, 2019
+            </div>
+          </li>
+          <li class="media row my-3">
+            <img src="./images/posts/post.png" class="col-4 mx-0" height="75" alt="Small post">
+            <div class="media-body col-8">
+              <h6 class="mt-0 mb-1"><a href="#" class="stretched-link"></a>31 Ways to Decorate your new Home by yourself</h6>
+              Drake Oyle, Jun 21, 2019
+            </div>
+          </li>
+        </div>
+
+
+
+        <!-- Property Cards -->
+        <div class="my-5">
+          <span class="category mt-auto price rounded text-white bg-secondary py-1 pb-2 px-2"><small
+            class="p-2 font-weight-bold">Featured Properties</small></span>
+          <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
+            <img class="card-img" src="./images/listing.png" alt="Card image">
+            <div class="card-img-overlay d-flex justify-content-between">
+              <p></p>
+              <h5 class="price rounded text-white">$78,096</h5>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title"><strong><a href="#" class="stretched-link"></a>El Classico Mansion</strong></h4>
+              <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted mb-0 d-flex justify-content-between">
+                <span>10 Rooms</span>
+                <span>5 Baths</span>
+                <span>7 Bathrooms</span>
+                <span>678m<sup>2</sup></span>
+              </small>
+            </div>
+          </div>
+          <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
+            <img class="card-img" src="./images/listing.png" alt="Card image">
+            <div class="card-img-overlay d-flex justify-content-between">
+              <p></p>
+              <h5 class="price rounded text-white">$78,096</h5>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title"><strong><a href="#" class="stretched-link"></a>El Classico Mansion</strong></h4>
+              <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted mb-0 d-flex justify-content-between">
+                <span>10 Rooms</span>
+                <span>5 Baths</span>
+                <span>7 Bathrooms</span>
+                <span>678m<sup>2</sup></span>
+              </small>
+            </div>
+          </div>
+          <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
+            <img class="card-img" src="./images/listing.png" alt="Card image">
+            <div class="card-img-overlay d-flex justify-content-between">
+              <p></p>
+              <h5 class="price rounded text-white">$78,096</h5>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title"><strong><a href="#" class="stretched-link"></a>El Classico Mansion</strong></h4>
+              <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted mb-0 d-flex justify-content-between">
+                <span>10 Rooms</span>
+                <span>5 Baths</span>
+                <span>7 Bathrooms</span>
+                <span>678m<sup>2</sup></span>
+              </small>
+            </div>
+          </div>
+        </div>
+
+      </aside><!-- /.blog-sidebar -->
+
+    </div><!-- /.row -->
+
+  </main><!-- /.container -->
+
+  <!-- FOOTER -->
+  <footer class="bg-light mt-md-5">
+    <div class="row container py-4 py-md-5 mx-auto">
+    <div class="col-6 col-md">
+        <img class="d-block mb-3" src="./images/Westan Logo.svg" alt="">
+        <span class="text-center py-md-0">
+            <a class="pr-2" href="http://">
+                <img src="./images/facebook.svg" alt="facebook link">
+            </a>
+            <a class="pr-2" href="http://">
+                <img src="./images/instagram.svg" alt="instagram link">
+            </a>
+            <a class="pr-2" href="http://">
+                <img src="./images/linkedin.svg" alt="linkedin link">
+            </a>
+        </span>
+    </div>
+    <div class="col-6 col-md">
+        <h5 class="text-uppercase">top links</h5>
+        <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Blog</a></li>
+        <li><a class="text-muted" href="#">Find Properties</a></li>
+        <li><a class="text-muted" href="#">Back to Westan</a></li>
+        <li><a class="text-muted" href="#">About Us</a></li>
+        </ul>
+    </div>
+    <div class="col-6 col-md">
+        <h5 class="text-uppercase">top categories</h5>
+        <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Trending</a></li>
+        <li><a class="text-muted" href="#">Real Estate News</a></li>
+        <li><a class="text-muted" href="#">Market Trends</a></li>
+        <li><a class="text-muted" href="#">Lifestyle</a></li>
+        </ul>
+    </div>
+    <div class="col-6 col-md-5">
+        <h5 class="text-uppercase">subscribe</h5>
+        <form>
+        <div class="form-md-row align-items-center">
+            <div class="my-1">
+            <label class="sr-only" for="inlineFormInputName">Email</label>
+            <input type="email" class="form-control bg-white" id="inlineFormInputName" placeholder="Email address">
+            </div>
+            <div class="w-25 my-1">
+            <button type="submit" class="btn btn-primary border-0 rounded">Submit</button>
+            </div>
+        </div>
+        </form>
+        <small class="d-none d-md-block"> Get updates on latest real estate trends
+
+        </small>
+    </div>
     </div>
 
+    <div class="bg-dark text-center text-white py-2 py-md-3">
+      <span class="container "><small> &copy; 2020 Westan Realtors. All rights reserved.</small></span> 
+  </div>
+</footer>
 
+</body>
 
-    <main role="main" class="container mt-5">
-        <div class="row">
-            <!-- blog-main col -->
-            <div class="post col-md-8 blog-main">
-
-                <!-- Post Image -->
-                <div class="card shadow-sm bg-dark text-white text-white border-0 mb-5" style="min-width: 18rem;">
-                    <img class="card-img" src="./images/posts/post.png" alt="Card image">
-                    <div class="card-img-overlay d-flex flex-column-reverse">
-                      <div class="">
-                          <h5 class="mt-auto price rounded text-white">News</h5>
-                          <h4 class="card-title"><strong>Looking for a New Place? Use This Time to Create Your Wishlist</strong></h4>
-                          <p class="card-text">Drake Oyle, Jun 21, 2019</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                <!-- blog-post -->
-                <h3 class="pb-4 mb-4 font-italic border-bottom">
-                    From the Firehose
-                </h3>
-
-                <div class="blog-post">
-                    <h2 class="blog-post-title">Sample blog post</h2>
-                    <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
-
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-                    <hr>
-                    <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-                    <blockquote>
-                    <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </blockquote>
-                    <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                    <h2>Heading</h2>
-                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    <h3>Sub-heading</h3>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <pre><code>Example code block</code></pre>
-                    <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-                    <h3>Sub-heading</h3>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <ul>
-                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-                    <li>Donec id elit non mi porta gravida at eget metus.</li>
-                    <li>Nulla vitae elit libero, a pharetra augue.</li>
-                    </ul>
-                    <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-                    <ol>
-                    <li>Vestibulum id ligula porta felis euismod semper.</li>
-                    <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-                    <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-                    </ol>
-                    <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-                </div>
-                <!-- /.blog-post -->
-
-                <!-- Comments -->
-                <div class="comments">
-                    <h1>Comments</h1>
-                   <ul class="list-unstyled">
-                    <li class="media my-4 border p-3 rounded">
-                      <img src="./images/posts/comment.png" class="mr-3" alt="...">
-                      <div class="media-body">
-                        <h5 class="mt-0 mb-1">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                      </div>
-                    </li>
-                    <div class="media my-4 border p-3 rounded">
-                        <img src="./images/posts/comment.png" class="mr-3" alt="...">
-                        <div class="media-body">
-                          <h5 class="mt-0">Media heading</h5>
-                          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                      
-                          <div class="media mt-3">
-                            <a class="mr-3" href="#">
-                              <img src="./images/posts/comment.png" class="mr-3" alt="...">
-                            </a>
-                            <div class="media-body">
-                              <h5 class="mt-0">Media heading</h5>
-                              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <li class="media my-4 border p-3 rounded">
-                      <img src="./images/posts/comment.png" class="mr-3" alt="...">
-                      <div class="media-body">
-                        <h5 class="mt-0 mb-1">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                      </div>
-                    </li>
-                    <li class="media my-4 border p-3 rounded">
-                      <img src="./images/posts/comment.png" class="mr-3" alt="...">
-                      <div class="media-body">
-                        <h5 class="mt-0 mb-1">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                      </div>
-                    </li>
-                  </ul> 
-                </div>
-
-
-                <!-- Write post -->
-                <div class="write-comment my-5">
-                    <h1>Write a response</h1>
-                    <form class="comment-form border p-4 p-md-5">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control bg-light" id="name" placeholder="Your name">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control bg-light" id="inputEmail4" placeholder="email@me.com">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Response</label>
-                            <!-- <input type="text" class="form-control bg-light" id="inputAddress"> -->
-                            <textarea class="form-control bg-light w-100" name="" id="inputAddress" cols="30" rows="5" placeholder="Write your response here"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">POST RESPONSE</button>
-                    </form>
-                </div>
-                
-                
-
-            </div>
-            <!-- /.blog-main -->
-
-            <!-- /.blog-sidebar -->
-            <aside class="col-md-4 blog-sidebar">
-
-                <!-- Author -->
-                <div class="card shadow-sm bg-white text-dark text-white" style="min-width: 18rem;">
-                    <img class="card-img" src="./images/posts/author.png" height="350" alt="Card image">
-                </div>
-                <p class="my-4"><strong>Drake Oyle</strong>  is an author with an eye for the classics, an architect and an alumni of the Harvard Institute of Architecture.</p>
-
-                <!-- Similar posts -->
-                <div class="my-4">Similar Posts
-                    <li class="media row my-3">
-                        <img src="./images/posts/post.png" class="col-4 mx-0" height="100" alt="Small post">
-                        <div class="media-body col-8">
-                        <h5 class="mt-0 mb-1">31 Ways to Decorate your new Home by yourself</h5>
-                        Drake Oyle, Jun 21, 2019
-                        </div>
-                    </li>
-                    <li class="media row my-3">
-                        <img src="./images/posts/post.png" class="col-4 mx-0" height="100" alt="Small post">
-                        <div class="media-body col-8">
-                        <h5 class="mt-0 mb-1">31 Ways to Decorate your new Home by yourself</h5>
-                        Drake Oyle, Jun 21, 2019
-                        </div>
-                    </li>
-                    <li class="media row my-3">
-                        <img src="./images/posts/post.png" class="col-4 mx-0" height="100" alt="Small post">
-                        <div class="media-body col-8">
-                        <h5 class="mt-0 mb-1">31 Ways to Decorate your new Home by yourself</h5>
-                        Drake Oyle, Jun 21, 2019
-                        </div>
-                    </li>
-                </div>
-
-
-
-                <!-- Property Cards -->
-                <div class="my-4">Featured Properties
-                    <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
-                        <img class="card-img" src="./images/listing.png" alt="Card image">
-                        <div class="card-img-overlay d-flex justify-content-between">
-                        <p></p>
-                        <h5 class="price rounded text-white">$78,096</h5>
-                        </div>
-                        <div class="card-body">
-                        <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
-                        <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
-                        </div>
-                        <div class="card-footer">
-                        <small class="text-muted mb-0 d-flex justify-content-between">
-                            <span>10 Rooms</span>
-                            <span>5 Baths</span>
-                            <span>7 Bathrooms</span>
-                            <span>678m<sup>2</sup></span>
-                        </small>
-                        </div>
-                    </div>
-                    <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
-                        <img class="card-img" src="./images/listing.png" alt="Card image">
-                        <div class="card-img-overlay d-flex justify-content-between">
-                        <p></p>
-                        <h5 class="price rounded text-white">$78,096</h5>
-                        </div>
-                        <div class="card-body">
-                        <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
-                        <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
-                        </div>
-                        <div class="card-footer">
-                        <small class="text-muted mb-0 d-flex justify-content-between">
-                            <span>10 Rooms</span>
-                            <span>5 Baths</span>
-                            <span>7 Bathrooms</span>
-                            <span>678m<sup>2</sup></span>
-                        </small>
-                        </div>
-                    </div>
-                    <div class="card shadow-sm bg-white my-4 text-dark text-white" style="min-width: 18rem;">
-                        <img class="card-img" src="./images/listing.png" alt="Card image">
-                        <div class="card-img-overlay d-flex justify-content-between">
-                        <p></p>
-                        <h5 class="price rounded text-white">$78,096</h5>
-                        </div>
-                        <div class="card-body">
-                        <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
-                        <p class="card-text">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
-                        </div>
-                        <div class="card-footer">
-                        <small class="text-muted mb-0 d-flex justify-content-between">
-                            <span>10 Rooms</span>
-                            <span>5 Baths</span>
-                            <span>7 Bathrooms</span>
-                            <span>678m<sup>2</sup></span>
-                        </small>
-                        </div>
-                    </div>
-                  </div>  
-
-            </aside><!-- /.blog-sidebar -->
-
-        </div><!-- /.row -->
-
-        </main><!-- /.container -->
-
-        <footer class="blog-footer">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-        <p>
-            <a href="#">Back to top</a>
-        </p>
-        </footer>
-    </body>
-    </html>
+</html>
