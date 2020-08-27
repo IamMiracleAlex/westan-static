@@ -142,8 +142,8 @@
     border: 0;
   }
 
-  .signup {
-    background-color: #fc8210;
+  .top-color {
+    background-color: #fc8210 !important;
     border: 0;
   }
   
