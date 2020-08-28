@@ -26,6 +26,21 @@
   <link rel="stylesheet" href="./style/index.css">
   <link href="./style/lightbox.css" rel="stylesheet" />
 
+  <style>
+    .sliding-posts h4,
+    .sliding-posts p {
+      max-width: 600px;
+    }
+    .main-img {
+      max-height: 450px;
+      object-fit: cover;
+    }
+    @media (max-width: 450px) {
+      .main-img {
+        height: 160px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -79,36 +94,34 @@
     </div>
   </nav>
 
-  <div class=" w-100 bg-light">
+  <div class=" w-100 border-bottom" style="background-color: #F9FEFF;">
 
     <div class="container py-3">
       <div class="row my-3 my-md-5">
-        <div class="col-md-10">
+        <div class="col-10">
+          <img src="./images/posts/post-big.png" class="main-img d-block rounded w-100 img-fluid" alt="Post image">
           
-          <!-- Home Main Image -->
-          <img src="./images/posts/post-big.png" alt="" class="rounded img-main img-fluid mb-3">
-        </div>
+                <div class="card-img-overlay d-flex justify-content-between">
+                  <p></p>
+                  <h5 class="price mx-2 mx-md-3 font-weight-bold rounded text-white">$78,096</h5>
+                </div>
+
+          </div>
 
         <!-- Lightbox Thumbnails -->
-        <div class="col-md-2 thumbs">
+        <div class="col-2 px-0 pr-2 mx-0 thumbs">
 
-          <div class="mb-3">
             <a href="./images/posts/image 39.png" data-lightbox="home-images">
-              <img src="./images/thumb.png" alt="product thumbnails" class="img-fluid">
+              <img src="./images/thumb.png" alt="product thumbnails" class="img-fluid mb-3 shadow-sm rounded">
             </a>
-          </div>
 
-          <div class="mb-3">
             <a href="./images/posts/image 38.png" data-lightbox="home-images">
-              <img src="./images/thumb.png" alt="product thumbnails" class="img-fluid">
+              <img src="./images/thumb.png" alt="product thumbnails" class="img-fluid mb-3 shadow-sm rounded">
             </a>
-          </div>
 
-          <div class="mb-3">
             <a href="./images/posts/image 37.png" data-lightbox="home-images">
-              <img src="./images/thumb.png" alt="product thumbnails" class="img-fluid">
+              <img src="./images/thumb.png" alt="product thumbnails" class="img-fluid shadow-sm rounded">
             </a>
-          </div>
 
           
 
@@ -119,14 +132,14 @@
       <div class="mb-5">
         <div class="d-flex justify-content-between">
           <p class="h2"><strong>El Classique Mansion</strong> </p>
-          <p class="h2 d-non font-weight-bold text-danger">N 450,000</p>
+          <p class="h2 d-none d-md-block font-weight-bold text-orange">N 450,000</p>
         </div>
 
         <p class="h5 text-muted">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
-        <div class="pt-2">
-          <small class="bg-primary text-white rounded px-3 py-2">BUY NOW</small>
-          <small class="bg-white border ml-3 px-3 py-2">ADD TO WISHLIST</small>
-          <small class="bg-white border ml-3 px-3 py-2">SH</small>
+        <div class="pt-2 d-inline d-flex">
+          <a href="./checkout.html" class="btn-sm bg-orange text-white rounded px-3 py-2">BUY NOW</a hr>
+          <a href="./checkout.html"  class="btn-sm text-dark bg-light rounded font-weight-bold border ml-3 px-3 py-2">ADD TO WISHLIST</a>
+          <a href="./checkout.html"  class="btn-sm text-dark bg-light rounded font-weight-bold border ml-3 px-3 py-2">SH</a>
         </div>
       </div>
 
@@ -154,6 +167,7 @@
           scelerisque eleifend donec pretium vulputate.</p>
 
 
+
         <p class="h5 mb-3 mt-5 font-weight-bold">Location</p>
         <div class="card shadow border embed-responsive embed-responsive-16by9">
           <iframe
@@ -173,7 +187,9 @@
             src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://pannellum.org/images/jfk.jpg"></iframe>
         </div> -->
 
-        <div class="mt-5 video-tab">
+
+        <!-- Video/ 360 tab -->
+        <div class="my-5 video-tab">
           <div class="">
             <div class="list-group list-group-horizontal-sm" id="list-tab" role="tablist">
               <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Video Tour</a>

@@ -1,7 +1,7 @@
  * {
     font-family: 'Inter', sans-serif;
   }
-  
+
  header {
       background-image: url(../images/bg.png);
       /* background-position: center; */
@@ -25,7 +25,7 @@
   .bg-orange {
     background-color: #fc8210;
   }
-  .video-tab .active {
+  .video-tab .list-group .active {
     background-color: #fc8210;
     color: #fff !important;
     border: 0;
@@ -90,7 +90,8 @@
     overflow: hidden;
   }
 
-  .card .price {
+  .card .price,
+  .price {
     padding: 5px 13px !important;
     background-color: rgba(0, 0, 0, 0.555);
     width: min-content;
@@ -163,6 +164,13 @@
     }
     header {
       padding: 0;
+    }
+    .price {
+      padding: 5px 13px !important;
+      background-color: rgba(0, 0, 0, 0.555);
+      font-size: medium;
+      width: min-content;
+      height: min-content;
     }
     .masthead {padding: 4rem 0 3rem;}
     .masthead h1 {font-size: 24px;}
