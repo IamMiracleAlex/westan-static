@@ -1,6 +1,7 @@
  * {
     font-family: 'Inter', sans-serif;
   }
+  
  header {
       background-image: url(../images/bg.png);
       /* background-position: center; */
@@ -15,6 +16,18 @@
 
   .signup {
     background-color: #fc8210;
+    border: 0;
+  }
+
+  .text-orange {
+    color: #fc8210;
+  }
+  .bg-orange {
+    background-color: #fc8210;
+  }
+  .video-tab .active {
+    background-color: #fc8210;
+    color: #fff !important;
     border: 0;
   }
   
