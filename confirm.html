@@ -39,6 +39,23 @@
     font-size: 16px !important;
     color: #003333;
   } */
+  .container > .card {
+      border-radius: 10px !important;
+  }
+  .property-detail {
+      background-color: hsla(190, 43%, 95%, 0.9) !important;
+      color: #003333;
+      /* opacity: 0.5; */
+      border-radius: 10px;
+      border: 1px solid hsla(240, 10%, 50%, 0.7) !important;
+  }
+  .card-body .card-text,
+  .card-footer {
+      color: #5A6F6F;
+  }
+  .card-footer {
+      font-size: 14px !important;
+  }
   form {
     font-size: 14px;
     color: #003333;
@@ -108,14 +125,36 @@
     </div>
 
     <div class="container">
-        <div class="card mb-3" style="max-widt: 540px;">
+        <div class="card shadow-sm mb-3">
             <div class="row no-gutters rounded overflow-hidden">
               <div class="col-md-8">
                 <img src="./images/posts/post-big.png" class="card-img rounded-0 h-100" alt="...">
+                <div class="card-img-overlay px-5 d-flex flex-col-reverse">
+                    <div class="property-detail rounded bg-secondary w-100 p- mt-auto border">
+                        <h5 class="price rounded text-white float-right bg-secondary px-3 py-2 mt-4 mr-4">$78,096</h5>
+                        <div class="card-body ml-3">
+                            <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
+                            <p class="card-text text-secondary">
+                                <img src="./images/location.svg" alt="">
+                                Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.
+                            </p>
+                          </div>
+                        
+                        <div class="card-footer">
+                            <div class="mb-0 ">
+                              <span class="ml-3">10 Rooms</span>
+                              <span class="ml-3">5 Baths</span>
+                              <span class="ml-3">7 Bathrooms</span>
+                              <span class="ml-3">678m<sup>2</sup></span>
+                            </div>
+                          </div>
+                    </div>
+                    
+                  </div>
               </div>
               <div class="col-md-4">
                 <div class="card-body px-5 py-5">
-                    <h5 class="card-title font-weight-bold text-center mb-4">Amount to Pay Now</h5>
+                    <h4 class="card-title font-weight-bold text-center mb-4">Amount to Pay Now</h4>
                     <form>
                         <div class="form-group row">
                             <label for="price" class="col-sm-6 col-form-label">Price (#)</label>
@@ -147,7 +186,7 @@
                               <input type="email" class="form-control" id="amount-pay-now" value="1,750,000" >
                             </div>
                           </div>
-                        <button type="submit" class="btn btn-primary w-100 border-0">Sign in</button>
+                        <button type="submit" class="btn btn-primary w-100 border-0">Checkout</button>
                         
                       </form>
                 </div>
@@ -155,83 +194,7 @@
             </div>
           </div>
     </div>
-
-    <!-- <div class="container">
-      <div class="row mx-auto col-md-9">
-        <div class="col border rounded text-center p-5 mr-2">
-          <p class="h4 pb-3">Our Bank Accounts </p>
-          <div class="card mb-3">
-            <div class="card-header">Zenith Bank Nig Plc</div>
-            <div class="card-body py-2">
-              <p class="card-text mb-0">Account Name</p>
-              <h5 class="card-title">Westan Realtors Nig Ltd</h5>
-              <p class="card-text mb-0">Account No</p>
-              <h5 class="card-title">0765234943</h5>
-            </div>
-          </div>
-          <div class="card mb-3">
-            <div class="card-header">Zenith Bank Nig Plc</div>
-            <div class="card-body py-2">
-              <p class="card-text mb-0">Account Name</p>
-              <h5 class="card-title">Westan Realtors Nig Ltd</h5>
-              <p class="card-text mb-0">Account No</p>
-              <h5 class="card-title">0765234943</h5>
-            </div>
-          </div>
-          <div class="card mb-3">
-            <div class="card-header">Zenith Bank Nig Plc</div>
-            <div class="card-body py-2">
-              <p class="card-text mb-0">Account Name</p>
-              <h5 class="card-title">Westan Realtors Nig Ltd</h5>
-              <p class="card-text mb-0">Account No</p>
-              <h5 class="card-title">0765234943</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col border rounded ml-3 p-5">
-          <p class="h4 pb-3 text-center font-weight-bold">Checkout Form</p>
-          <form class="needs-validation" novalidate>
-              <div class="mb-3">
-                <label for="validationTooltip01">Buyer's name</label>
-                <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-                <div class="valid-tooltip">
-                  Looks good!
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="validationTooltip02">Last name</label>
-                <textarea class="form-control w-100" name="" id="validationTooltip02" rows="4" required></textarea>
-                <div class="valid-tooltip">
-                  Looks good!
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="validationTooltip03">Phone number</label>
-                <input type="number" class="form-control" id="validationTooltip03" required>
-                <div class="invalid-tooltip">
-                  Please provide a valid phone number.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="validationTooltip04">Payment method</label>
-                <select class="custom-select" id="validationTooltip04" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option>Bank Transfer</option>
-                  <option>Bank Deposit</option>
-                </select>
-                <div class="invalid-tooltip">
-                  Please select a valid state.
-                </div>
-              </div>
-              <button class="btn btn-primary w-100 mb-3" type="submit">Submit form</button>
-              <button class="btn btn-outline-primary w-100" type="submit">Submit form</button>
-          </form>
-        </div>
-      </div>
-    </div> -->
-      
-
-    
+ 
       <div class="py-5"></div>
 
       
