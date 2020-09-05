@@ -26,26 +26,12 @@
   body {
     background-image: none;
   }
-  /* .card {
-    background-color: #F9FEFF !important;
-    border: 1px solid #E0E0F4;
-  }
-  .card-header {background-color: #EBF5F7;}
-  .card-text {
-    font-size: 12px !important;
-
-  }
-  .card-title {
-    font-size: 16px !important;
-    color: #003333;
-  } */
   .container > .card {
       border-radius: 10px !important;
   }
   .property-detail {
       background-color: hsla(190, 43%, 95%, 0.9) !important;
       color: #003333;
-      /* opacity: 0.5; */
       border-radius: 10px;
       border: 1px solid hsla(240, 10%, 50%, 0.7) !important;
   }
@@ -115,32 +101,32 @@
       </div>
     </nav>
 
-    <div class="my-1 my-md-5 py-4"></div>
+    <div class="my-1 my-md-4 py-5"></div>
 
 
 
     <div class="text-center mb-5">
-        <p class="h1"><strong>Checkout</strong> </p>
-        <p class="h3 col-12 col-md-7 mx-auto text-secondary">Choose a bank account to pay or transfer to, pay via transfer or deposit.  Confirm or edit your personal details and proceed to enter your transaction details upon payment.</p>
+        <p class="h1"><strong>Confirm Purchase</strong> </p>
+        <p class="h3 col-12 col-md-7 mx-auto text-secondary">Your property is few clicks away. Click on checkout and proceed to payment page.</p>
     </div>
 
     <div class="container">
         <div class="card shadow-sm mb-3">
             <div class="row no-gutters rounded overflow-hidden">
-              <div class="col-md-8">
+              <div class="col-md-8 overflow-hidden">
                 <img src="./images/posts/post-big.png" class="card-img rounded-0 h-100" alt="...">
-                <div class="card-img-overlay px-5 d-flex flex-col-reverse">
-                    <div class="property-detail rounded bg-secondary w-100 p- mt-auto border">
-                        <h5 class="price rounded text-white float-right bg-secondary px-3 py-2 mt-4 mr-4">$78,096</h5>
+                <div class="card-img-overlay px-4 px-md-5 d-flex flex-col-reverse">
+                    <div class="property-detail rounded bg-secondary w-100 mt-auto border">
+                        <h5 class="price rounded text-white float-right bg-secondary px-3 py-2 mt-4 mr-4 d-none d-md-block">$78,096</h5>
                         <div class="card-body ml-3">
-                            <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
-                            <p class="card-text text-secondary">
+                            <h4 class="card-title p-0 mb-0"><strong>El Classico Mansion</strong></h4>
+                            <p class="card-text text-secondary d-none d-md-block">
                                 <img src="./images/location.svg" alt="">
                                 Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.
                             </p>
                           </div>
                         
-                        <div class="card-footer">
+                        <div class="card-footer d-none d-md-block">
                             <div class="mb-0 ">
                               <span class="ml-3">10 Rooms</span>
                               <span class="ml-3">5 Baths</span>
@@ -153,36 +139,34 @@
                   </div>
               </div>
               <div class="col-md-4">
-                <div class="card-body px-5 py-5">
+                <div class="card-body p-4 p-md-5">
                     <h4 class="card-title font-weight-bold text-center mb-4">Amount to Pay Now</h4>
                     <form>
                         <div class="form-group row">
-                            <label for="price" class="col-sm-6 col-form-label">Price (#)</label>
-                            <div class="col-sm-6">
-                              <h5 class="card-title">15,000,000</h5>
-                            </div>
+                            <label for="price" class="col-6 col-form-label">Price (#)</label>
+                            <h5 class="col-6 pb-1">15,000,000</h5>
                         </div>
                         <div class="form-group row">
-                          <label for="discount-code" class="col-sm-6 col-form-label">Discount Code</label>
-                          <div class="col-sm-6">
+                          <label for="discount-code" class="col-6 col-form-label">Discount Code</label>
+                          <div class="col-6">
                             <input type="email" class="form-control" id="discount-code" placeholder="XPR-4567-A" >
                           </div>
                         </div>
                         <div class="form-group row">
-                            <label for="Discount" class="col-sm-6 col-form-label">Discount</label>
-                            <div class="col-sm-6">
+                            <label for="Discount" class="col-6 col-form-label">Discount</label>
+                            <div class="col-6">
                               <h5 class="card-title">750,000</h5>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="price" class="col-sm-6 col-form-label">Amount Payable</label>
-                            <div class="col-sm-6">
+                            <label for="price" class="col-6 col-form-label">Amount Payable</label>
+                            <div class="col-6">
                               <h5 class="card-title">14,250,000</h5>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="amount-pay-now" class="col-sm-6 col-form-label">Amount to Pay Now</label>
-                            <div class="col-sm-6">
+                            <label for="amount-pay-now" class="col-6 col-form-label">Amount to Pay Now</label>
+                            <div class="col-6">
                               <input type="email" class="form-control" id="amount-pay-now" value="1,750,000" >
                             </div>
                           </div>
