@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Checkout Page 1</title>
+    <title>Confirm Purchase</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -26,7 +26,7 @@
   body {
     background-image: none;
   }
-  .card {
+  /* .card {
     background-color: #F9FEFF !important;
     border: 1px solid #E0E0F4;
   }
@@ -38,15 +38,13 @@
   .card-title {
     font-size: 16px !important;
     color: #003333;
-  }
+  } */
   form {
     font-size: 14px;
+    color: #003333;
   }
-  .main-button {background-color: #FC8210 !important;}
-  .second-button {
-    color: #FC8210 !important;
-    border: 1px solid #FC8210 !important;
-  }
+  .col-form-label { color: #73738D;}
+  form button {background-color: #FC8210 !important;}
 </style>
 
 </head>
@@ -110,6 +108,55 @@
     </div>
 
     <div class="container">
+        <div class="card mb-3" style="max-widt: 540px;">
+            <div class="row no-gutters rounded overflow-hidden">
+              <div class="col-md-8">
+                <img src="./images/posts/post-big.png" class="card-img rounded-0 h-100" alt="...">
+              </div>
+              <div class="col-md-4">
+                <div class="card-body px-5 py-5">
+                    <h5 class="card-title font-weight-bold text-center mb-4">Amount to Pay Now</h5>
+                    <form>
+                        <div class="form-group row">
+                            <label for="price" class="col-sm-6 col-form-label">Price (#)</label>
+                            <div class="col-sm-6">
+                              <h5 class="card-title">15,000,000</h5>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="discount-code" class="col-sm-6 col-form-label">Discount Code</label>
+                          <div class="col-sm-6">
+                            <input type="email" class="form-control" id="discount-code" placeholder="XPR-4567-A" >
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Discount" class="col-sm-6 col-form-label">Discount</label>
+                            <div class="col-sm-6">
+                              <h5 class="card-title">750,000</h5>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="price" class="col-sm-6 col-form-label">Amount Payable</label>
+                            <div class="col-sm-6">
+                              <h5 class="card-title">14,250,000</h5>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="amount-pay-now" class="col-sm-6 col-form-label">Amount to Pay Now</label>
+                            <div class="col-sm-6">
+                              <input type="email" class="form-control" id="amount-pay-now" value="1,750,000" >
+                            </div>
+                          </div>
+                        <button type="submit" class="btn btn-primary w-100 border-0">Sign in</button>
+                        
+                      </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- <div class="container">
       <div class="row mx-auto col-md-9">
         <div class="col border rounded text-center p-5 mr-2">
           <p class="h4 pb-3">Our Bank Accounts </p>
@@ -176,12 +223,12 @@
                   Please select a valid state.
                 </div>
               </div>
-              <button class="main-button btn btn-primary w-100 mb-3 border-0" type="submit">Enter Transaction Details</button>
-              <button class="second-button btn btn-outline-primary w-100" type="submit">Confirm Payment Later</button>
+              <button class="btn btn-primary w-100 mb-3" type="submit">Submit form</button>
+              <button class="btn btn-outline-primary w-100" type="submit">Submit form</button>
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
       
 
     
