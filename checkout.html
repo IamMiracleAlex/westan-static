@@ -26,6 +26,17 @@
   body {
     background-image: none;
   }
+  .card-text {
+    font-size: 12px !important;
+
+  }
+  .card-title {
+    font-size: 16px !important;
+    color: #003333;
+  }
+  form {
+    font-size: 14px;
+  }
 </style>
 
 </head>
@@ -84,73 +95,86 @@
 
 
     <div class="text-center mb-5">
-        <p class="h1"><strong>Confirmation Form</strong> </p>
-        <p class="h3 col-12 col-md-6 mx-auto">Upload bank teller or transfer screenshot and enter your transaction details to confirm payment.</p>
+        <p class="h1"><strong>Checkout</strong> </p>
+        <p class="h3 col-12 col-md-7 mx-auto text-secondary">Choose a bank account to pay or transfer to, pay via transfer or deposit.  Confirm or edit your personal details and proceed to enter your transaction details upon payment.</p>
     </div>
 
-
-
-      <form class="auth signup-for col-12 col-md-7 mx-auto border p-5 needs-validation rounded mb-5 pb-5 bg-white text-center" novalidate>
-          <p class="text-center h4 mb-3 mb-md-5"><strong>Transaction Details</strong> </p>
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control px-3" id="validationCustom01" placeholder="Firstname" required>
-            <div class="invalid-feedback">
-                Please enter your first name.
+    <div class="container">
+      <div class="row mx-auto col-md-9">
+        <div class="col border rounded text-center p-5 mr-2">
+          <p class="h3 pb-3">Our Bank Accounts </p>
+          <div class="card text-secondary bg-light mb-3">
+            <div class="card-header">Zenith Bank Nig Plc</div>
+            <div class="card-body py-2">
+              <p class="card-text mb-0">Account Name</p>
+              <h5 class="card-title">Westan Realtors Nig Ltd</h5>
+              <p class="card-text mb-0">Account No</p>
+              <h5 class="card-title">0765234943</h5>
             </div>
           </div>
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control px-3" id="validationCustom02" placeholder="Lastname" required>
-            <div class="invalid-feedback">
-                Please enter your last name.
+          <div class="card text-secondary bg-light mb-3">
+            <div class="card-header">Zenith Bank Nig Plc</div>
+            <div class="card-body py-2">
+              <p class="card-text mb-0">Account Name</p>
+              <h5 class="card-title">Westan Realtors Nig Ltd</h5>
+              <p class="card-text mb-0">Account No</p>
+              <h5 class="card-title">0765234943</h5>
+            </div>
+          </div>
+          <div class="card text-secondary bg-light mb-3">
+            <div class="card-header">Zenith Bank Nig Plc</div>
+            <div class="card-body py-2">
+              <p class="card-text mb-0">Account Name</p>
+              <h5 class="card-title">Westan Realtors Nig Ltd</h5>
+              <p class="card-text mb-0">Account No</p>
+              <h5 class="card-title">0765234943</h5>
             </div>
           </div>
         </div>
-        <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <input type="number" class="form-control px-3" id="validationCustom01" placeholder="Phone number" required>
-              <div class="invalid-feedback">
-                  Please enter your phone number.
+        <div class="col border rounded ml-3 p-5">
+          <p class="h3 pb-3 text-center">Our Bank Accounts </p>
+          <form class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="validationTooltip01">Buyer's name</label>
+                <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+                <div class="valid-tooltip">
+                  Looks good!
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <input type="email" class="form-control px-3" id="validationCustom02" placeholder="Email address" required>
-              <div class="invalid-feedback">
-                  Please enter a valid email address.
+              <div class="mb-3">
+                <label for="validationTooltip02">Last name</label>
+                <textarea class="form-control w-100" name="" id="validationTooltip02" rows="4" required></textarea>
+                <div class="valid-tooltip">
+                  Looks good!
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <input type="password" class="form-control px-3" id="validationCustom01" placeholder="Password" required>
-              <div class="invalid-feedback">
-                  Please choose a password.
+              <div class="mb-3">
+                <label for="validationTooltip03">Phone number</label>
+                <input type="number" class="form-control" id="validationTooltip03" required>
+                <div class="invalid-tooltip">
+                  Please provide a valid phone number.
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <input type="password" class="form-control px-3" id="validationCustom02" placeholder="Confirm password" required>
-              <div class="invalid-feedback">
-                  Password does not match.
+              <div class="mb-3">
+                <label for="validationTooltip04">Payment method</label>
+                <select class="custom-select" id="validationTooltip04" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Bank Transfer</option>
+                  <option>Bank Deposit</option>
+                </select>
+                <div class="invalid-tooltip">
+                  Please select a valid state.
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <input type="text" class="form-control px-3" id="validationCustom01" placeholder="Referral code/name (Optional)">
-            </div>
-            <div class="form-group col-md-6 py-auto">
-              <button class="signup btn btn-primary w-100 mb-1 mx-auto" type="submit">Sign Up</button>
-            </div>
-          </div>
-          
-          
-        <button class="signup btn btn-primary col-md-6 mb-1 mx-auto" type="submit">Sign Up</button>
-        <br>
-        <small>
-            Have an account? <a href="http://">Login</a> 
-        </small>
-      </form>
+              <button class="btn btn-primary w-100 mb-3" type="submit">Submit form</button>
+              <button class="btn btn-outline-primary w-100" type="submit">Submit form</button>
+          </form>
+        </div>
+      </div>
+    </div>
+      
 
+    
       <div class="py-5"></div>
 
       
