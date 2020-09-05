@@ -26,6 +26,28 @@
   body {
     background-image: none;
   }
+  form label {
+    color: #73738D;
+  }
+  .upload-button-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .upload-button {
+    background-color: #FC8210;
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 14px;
+    margin: auto 60px;
+  }
+  .upload-button-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    opacity: 0;
+  }
 </style>
 
 </head>
@@ -87,46 +109,66 @@
         <p class="h1"><strong>Confirmation Form</strong> </p>
         <p class="h3 col-12 col-md-6 mx-auto text-secondary">Upload bank teller or transfer screenshot and enter your transaction details to confirm payment.</p>
     </div>
-
-      <form class="auth signup-for col-12 col-md-7 mx-auto border p-5 needs-validation rounded mb-5 pb-5 bg-white text-center" novalidate>
-          <p class="text-center h4 mb-3 mb-md-5"><strong>Transaction Details</strong> </p>
+    
+    <div class="container">
+      <form class="auth col-12 col-md-8 mx-md-auto border p-3 p-md-5 needs-validation rounded mb-5 pb-5 bg-white text-left" novalidate>
+          <p class="text-center h4 mb-3 mb-md-5 pt-3 pt-md-0"><strong>Transaction Details</strong> </p>
           <div class="form-row">
-            <div class="col-md-6 form-col px-3">
-              <div class="w-100 mb-3">
-                <input type="text" class="form-control px-3" id="validationCustom02" placeholder="Confirm password" required>
-                <div class="invalid-feedback">
-                    Password does not match.
+            <div class="col-md-6  form-col px-3">
+              <div class="mb-3">
+                <label for="bankPayedTo">Bank Payed to</label>
+                <select class="custom-select" id="bankPayedTo" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Zenith</option>
+                  <option>First Bank</option>
+                </select>
+                <div class="invalid-tooltip">
+                  Please select a bank.
                 </div>
               </div>
+                            
               <div class="mb-3">
+                <label for="myFile">Upload Teller/Transaction Image</label>
                 <div class="form-control border py-5 h-100">
-                  <button class="btn btn-dark">Upload Teller Image</button>
+                  <div class="upload-button-wrapper px-auto">
+                    <button class="upload-button border-0 rounded">Choose Image</button>
+                    <input type="file" name="myFile" id="myFile">
+                  </div>
                 </div>
               </div>
             </div>
+
             <div class="col-md-6 form-col px-3">
               <div class="mb-3">
-                <input type="text" class="form-control px-3" id="validationCustom01" placeholder="Firstname" required>
-                <div class="invalid-feedback">
-                    Please enter your first name.
+                <label for="payersName">Payer's name</label>
+                <input type="text" class="form-control" id="payersName" placeholder="Payer's name" required>
+                <div class="invalid-tooltip">
+                  Please enter Payer's name.
                 </div>
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control px-3" id="validationCustom02" placeholder="Lastname" required>
-                <div class="invalid-feedback">
-                    Please enter your last name.
+                <label for="amountPaid">Amount Paid</label>
+                <input type="number" class="form-control" id="amountPaid" required>
+                <div class="invalid-tooltip">
+                  Please enter the amount paid.
                 </div>
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control px-3" id="validationCustom01" placeholder="Referral code/name (Optional)">
+                <label for="tellerNo">Transaction/Teller Number</label>
+                <input type="text" class="form-control" id="tellerNo" required>
+                <div class="invalid-tooltip">
+                  Please enter the teller number.
+                </div>
               </div>
               <div class="form-group py-auto">
-                <button class="signup btn btn-primary w-100 mb-1 mx-auto" type="submit">Sign Up</button>
+                <button class="signup btn btn-primary w-100 mb-1 mx-auto" type="submit">Confirm Payment</button>
               </div>
             </div>
           </div>
           
       </form>
+    </div>
+      
 
       <div class="py-5"></div>
 
