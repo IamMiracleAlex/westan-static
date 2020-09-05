@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Checkout Page 2</title>
+    <title>Payment Successful</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -25,6 +25,40 @@
 <style>
   body {
     background-image: none;
+  }
+  /* .card {
+    background-color: #F9FEFF !important;
+    border: 1px solid #E0E0F4;
+  }
+  .card-header {background-color: #EBF5F7;}
+  .card-text {
+    font-size: 12px !important;
+
+  }
+  .card-title {
+    font-size: 16px !important;
+    color: #003333;
+  } */
+  .container .card {
+      border-radius: 10px !important;
+  }
+  .property-detail {
+      background-color: hsla(190, 43%, 95%, 0.9) !important;
+      color: #003333;
+      /* opacity: 0.5; */
+      border-radius: 10px;
+      border: 1px solid hsla(240, 10%, 50%, 0.7) !important;
+  }
+  .card-body .card-text,
+  .card-footer {
+      color: #5A6F6F;
+  }
+  .card-footer {
+      font-size: 14px !important;
+  }
+  .btn-dash {
+    background-color: #FC8210 !important;
+    color: #ffffff;
   }
 </style>
 
@@ -84,74 +118,49 @@
 
 
     <div class="text-center mb-5">
-        <p class="h1"><strong>Confirmation Form</strong> </p>
-        <p class="h3 col-12 col-md-6 mx-auto text-secondary">Upload bank teller or transfer screenshot and enter your transaction details to confirm payment.</p>
+        <p class="h1"><strong>Pay Successful</strong> </p>
+        <p class="h3 col-12 col-md-7 mx-auto text-secondary">Your are now the proud owner of El Classique Mansion, your property documents will be processed soon.</p>
     </div>
 
-      <form class="auth signup-for col-12 col-md-7 mx-auto border p-5 needs-validation rounded mb-5 pb-5 bg-white text-center" novalidate>
-          <p class="text-center h4 mb-3 mb-md-5"><strong>Transaction Details</strong> </p>
-          <div class="form-row">
-            <div class="col-md-6 form-col px-3">
-              <div class="w-100 mb-3">
-                <input type="text" class="form-control px-3" id="validationCustom02" placeholder="Confirm password" required>
-                <div class="invalid-feedback">
-                    Password does not match.
+    <div class="container">
+      <div class="col-md-9 mx-auto">
+        <div class="card shadow-sm mb-3 overflow-hidden">
+            <img src="./images/posts/post-big.png" class="card-img rounded-0 h-100" alt="...">
+                <div class="card-img-overlay px-5 d-flex flex-col-reverse">
+                    <div class="property-detail rounded bg-secondary w-100 p- mt-auto border">
+                        <h5 class="price rounded text-white float-right bg-secondary px-3 py-2 mt-4 mr-4">$78,096</h5>
+                        <div class="card-body ml-3">
+                            <h4 class="card-title"><strong>El Classico Mansion</strong></h4>
+                            <p class="card-text text-secondary">
+                                <img src="./images/location.svg" alt="">
+                                Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.
+                            </p>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <div class="mb-0 ">
+                              <span class="ml-3">10 Rooms</span>
+                              <span class="ml-3">5 Baths</span>
+                              <span class="ml-3">7 Bathrooms</span>
+                              <span class="ml-3">678m<sup>2</sup></span>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-              </div>
-              <div class="mb-3">
-                <div class="form-control border py-5 h-100">
-                  <button class="btn btn-dark">Upload Teller Image</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 form-col px-3">
-              <div class="mb-3">
-                <input type="text" class="form-control px-3" id="validationCustom01" placeholder="Firstname" required>
-                <div class="invalid-feedback">
-                    Please enter your first name.
-                </div>
-              </div>
-              <div class="mb-3">
-                <input type="text" class="form-control px-3" id="validationCustom02" placeholder="Lastname" required>
-                <div class="invalid-feedback">
-                    Please enter your last name.
-                </div>
-              </div>
-              <div class="mb-3">
-                <input type="text" class="form-control px-3" id="validationCustom01" placeholder="Referral code/name (Optional)">
-              </div>
-              <div class="form-group py-auto">
-                <button class="signup btn btn-primary w-100 mb-1 mx-auto" type="submit">Sign Up</button>
-              </div>
-            </div>
           </div>
-          
-      </form>
+      </div>
+      <div class="text-center">
+        <a href="" type="submit" class="btn btn-dash px-5 border-0 mt-4">Go to Dashboard</a>
+      </div>
+      
+    </div>
+
+    
 
       <div class="py-5"></div>
 
       
-      <script>
-      // JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-                }, false);
-            });
-            }, false);
-        })();
-      </script>
-
       <!-- JS, Popper.js, and jQuery -->
       <script src="./jquery/jquery.min.js"></script>
       <script src="./js/popper.min.js"></script>
