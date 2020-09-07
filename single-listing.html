@@ -31,6 +31,8 @@
     .sliding-posts p {
       max-width: 600px;
     }
+    .bg-shade {background-color: #EBF5F7 !important;}
+    .back-btn {color: #FC8210 !important;}
     .main-img {
       max-height: 450px;
       object-fit: cover;
@@ -38,6 +40,9 @@
     @media (max-width: 450px) {
       .main-img {
         height: 160px;
+      }
+      .option-buttons {
+        font-size: 12px;
       }
     }
   </style>
@@ -99,7 +104,7 @@
     <div class="container py-3">
       <div class="row my-3 my-md-5">
         <!-- Post carousel -->
-        <div id="carouselExampleCaptions" class="col-10 sliding-posts carousel slide" data-ride="carousel">
+        <div id="carouselExampleCaptions" class="col-12 col-md-10 sliding-posts carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -163,7 +168,7 @@
         </div>
 
         <!-- Lightbox Thumbnails -->
-        <div class="col-2 px-0 pr-2 mx-0 thumbs">
+        <div class="d-none d-md-block col-md-2 px-0 pr-2 mx-0 thumbs">
 
             <a href="./images/single-listing.png" data-lightbox="home-images">
               <img src="./images/thumb.png" alt="product thumbnails" class="img-fluid mb-3 shadow-sm rounded">
@@ -192,10 +197,15 @@
         </div>
 
         <p class="h5 text-muted">Palm Royal Estate, Off Ibeju-Lekki, Ikeja, Lagos State.</p>
-        <div class="pt-2 d-inline d-flex">
+        <div class="pt-2 d-inline d-flex option-buttons">
           <a href="./checkout.html" class="btn-sm bg-orange text-white rounded px-3 py-2">BUY NOW</a hr>
-          <a href="./checkout.html"  class="btn-sm text-dark bg-light rounded font-weight-bold border ml-3 px-3 py-2">ADD TO WISHLIST</a>
-          <a href="./checkout.html"  class="btn-sm text-dark bg-light rounded font-weight-bold border ml-3 px-3 py-2">SH</a>
+          <a href="./checkout.html"  class="bg-shade btn-sm text-dark rounded font-weight-bold ml-3 px-3 py-2">ADD TO WISHLIST</a>
+          <a href="./checkout.html"  class="bg-shade btn-sm text-dark rounded font-weight-bold ml-3 px-3 py-2">
+            <img src="./images/share-2.svg" alt="" srcset="">
+          </a>
+          <a href="./listings.html"  class="d-none d-md-block back-btn btn-sm border-0 ml-3 px-3 py-2">
+            Back to Listings
+          </a>
         </div>
       </div>
 
