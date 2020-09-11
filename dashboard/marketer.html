@@ -132,7 +132,7 @@
             </div>
             <!-- Dashboard Stats Cards -->
             <div class="stats row">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <div class="card border-0 shadow-sm mb-4 widget-flat">
                         <div class="card-body d-flex">
                             <div class="float-left mr-3">
@@ -147,7 +147,7 @@
                     </div> <!-- end card-->
                 </div> <!-- end col-->
 
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <div class="card border-0 shadow-sm mb-4 widget-flat">
                         <div class="card-body d-flex">
                             <div class="float-left mr-3">
@@ -162,7 +162,7 @@
                     </div> <!-- end card-->
                 </div> <!-- end col-->
 
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <div class="card border-0 shadow-sm mb-4 widget-flat">
                         <div class="card-body d-flex">
                             <div class="float-left mr-3">
@@ -182,15 +182,7 @@
                 <div class="col-md-8">
                     <div class="card border-0 shadow-sm mb-4 widget-flat">
                         <div class="card-body d-flex">
-                            <div class="float-left mr-3">
-                                <i class="mdi mdi-account-multiple widget-icon"></i>
-                                <div class="p-4 rounded-circle bg-light"></div>
-                            </div>
-                            <div class="">
-                                <h3 class="mb-0">36,254</h3>
-                                <p class="text-nowrap text-muted mb-0">Sales</p>  
-                            </div>
-                            
+                            <canvas id="myChart"></canvas>
                         </div> <!-- end card-body-->
                     </div> <!-- end card-->
 
@@ -255,7 +247,9 @@
                         </div> <!-- end card-body-->
                     </div> <!-- end card-->
                 </div> <!-- end col-->
+                
                 <div class="col-md-4 mb-4">
+                    <!-- Referrals -->
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="font-weight-bold mt-2">Referrals</h5>
@@ -317,7 +311,7 @@
 
 
     <!-- Graphs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="./Chart.min.js"></script>
     <script>
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
@@ -343,7 +337,8 @@
           },
           legend: {
             display: false,
-          }
+          },
+        //   DrawOnChartArea: false
         }
       });
     </script>
