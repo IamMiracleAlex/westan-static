@@ -41,6 +41,10 @@ body {
     font-size: 24px;
 }
 
+.grey {
+    color: #73738D !important;
+}
+
 .green {
     color: #31bfbf;
 }
@@ -56,6 +60,8 @@ body {
 .orange { color: #fc8210;}
 
 .bg-orange { background-color: #fc8210;}
+
+.border-orange {border: 1px solid #fc8210 !important;}
 
 .bg-green {
     background-color: #31bfbf;
@@ -83,4 +89,8 @@ body {
 
 .card {
     border-radius: 10px !important;
+}
+
+.font-12 {
+    font-size: 12px;
 }
