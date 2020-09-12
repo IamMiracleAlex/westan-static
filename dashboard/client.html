@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Westan Realtors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Client Properties: Westan Realtors</title>
+    <title>Clients Dashboard: Westan Realtors</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -73,7 +73,7 @@
             <div class="sidebar-sticky text-danger pt-5">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active d-flex align-items-center" href="/dashboard/marketer.html">
+                        <a class="nav-link active d-flex align-items-center" href="/dashboard/client.html">
                             <i class="fa fa-th-large mr-2" aria-hidden="true"></i>
                             Dashboard <span class="sr-only">(current)</span>
                         </a>
@@ -91,7 +91,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="#">
+                        <a class="nav-link d-flex align-items-center" href="./client-properties.html">
                             <i class="fa fa-building mr-2" aria-hidden="true"></i>
                             Properties
                         </a>
@@ -130,9 +130,9 @@
             <div class="py-5 d-block d-md-none"></div>
 
             <!-- Heading and Filters -->
-            <div class="row mb-3 mb-md-4 d-flex align-items-end">
-                <h3 class="col font-weight-bold text-center text-md-left mb-4 mb-md-0">Properties</h3>
-                <div class="col-auto d-non d-md-flex align-items-center">
+            <div class="row mb-4 d-flex align-items-end">
+                <h3 class="col font-weight-bold text-center text-md-left mb-4 mb-md-0">Dashboard</h3>
+                <div class="col-auto d-none d-md-flex align-items-center">
                     <label class="sr-only" for="inlineFormInputGroup">Search</label>
                     <div class="input-group overflow-hidden rounded border">
                         <input type="text" class="form-control border-0" id="inlineFormInputGroup" placeholder="Search">
@@ -142,86 +142,88 @@
                             </div>
                         </div>
                     </div>
-                    <a href="../listings.html" class="col-auto d-none d-md-block btn bg-orange text-white px-4 ml-3">Go to Listings</a>
+                    <a href="../listings.html" class="col-auto btn bg-orange text-white px-4 ml-3">Go to Listings</a>
                 </div>
 
             </div>
 
-
             <div class="row">
-                <div class="col">
-                    
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm mb-4 widget-flat">
+                        <div class="card-body d-flex">
+                            <div class="float-left mr-3">
+                                <i class="fa fa-cut p-3 rounded-circle blue bg-light-blue" aria-hidden="true"></i>
+                            </div>
+                            <div class="">
+                                <h4 class="mb-0">14 Properties</h4>
+                                <p class="text-nowrap text-muted mb-0">Sales</p>
+                            </div>
 
-                    <!-- Properties -->
+                        </div> <!-- end card-body-->
+                    </div> <!-- end card-->
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm mb-4 widget-flat">
+                        <div class="card-body d-flex">
+                            <div class="float-left mr-3">
+                                <i class="fa fa-cut p-3 rounded-circle blue bg-light-blue" aria-hidden="true"></i>
+                            </div>
+                            <div class="">
+                                <h4 class="mb-0">14 Properties</h4>
+                                <p class="text-nowrap text-muted mb-0">Sales</p>
+                            </div>
+
+                        </div> <!-- end card-body-->
+                    </div> <!-- end card-->
+                </div>
+                
+                <!-- Transactions -->
+                <div class="col-md-4">
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-body">
+                            <h5 class="font-weight-bold mt-2">Transactions</h5>
 
                             <div class="table-responsive">
                                 <table class="table table-centered nowrap table-hover mb-0 dtr-inline collapsed">
                                     <thead>
-                                        <tr class="border-bottom">
-                                            <th class="text-muted border-0 py-2 order-0 font-weight-normal">Property
-                                            </th>
-                                            <th class="text-muted border-0 py-2 font-weight-normal d-none d-md-block">
-                                               <span class="">Details</span></th>
-                                            <th class="text-muted border-0 py-2 font-weight-normal ">
-                                                <span class="d-none d-md-block">Address</span></th>
-                                            <th class="text-muted border-0 py-2 font-weight-normal"></th>
+                                        <tr class="border-top border-bottom">
+                                            <th class="text-muted border-0 py-2 font-weight-normal">Property</th>
+                                            <th class="text-muted border-0 py-2 font-weight-normal">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="border-0 pt-3 text-nowrap">
-                                                <img src="../images/dash-thumb.jpg" class="rounded img-responsive mr-2"
-                                                    height="30" width="30" alt="">
-                                                4 Bedroom Flat
+                                            <td class="border-0">
+                                                <img src="../images/dash-thumb.jpg"
+                                                    class="rounded-circle img-responsive mr-2" height="30" width="30"
+                                                    alt="">
+                                                Plazora Villa Rea
                                             </td>
-                                            <td class="border-0 pt-3 text-muted d-none d-md-block">
-                                                <span class="">6 Rooms, 4 Beds, 3 Baths, 245m<sup>2</sup></span> 
-                                            </td>
-                                            <td class="border-0 pt-3 text-muted">
-                                                <span class="d-none d-md-block">No 4, Ojodu Street, Off Ilasamaja, Ikorodu, Lagos</span> 
-                                            </td>
-                                            <td class="border-0 pt-3">
-                                                <a href="../listings.html" class="btn btn-sm bg-orange text-white px-3">
-                                                    View <span class="d-none d-md-inline">Details</span> 
-                                                </a>
+                                            <td class="border-0 pt-3 red">
+                                                Pending
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="border-0 text-nowrap">
-                                                <img src="../images/dash-thumb.jpg" class="rounded img-responsive mr-2"
-                                                    height="30" width="30" alt="">
-                                                4 Bedroom Flat
+                                            <td class="border-0">
+                                                <img src="../images/dash-thumb.jpg"
+                                                    class="rounded-circle img-responsive mr-2" height="30" width="30"
+                                                    alt="">
+                                                Plazora Villa Rea
                                             </td>
-                                            <td class="border-0 pt-3 text-muted d-none d-md-block">
-                                                <span class="">6 Rooms, 4 Beds, 3 Baths, 245m<sup>2</sup></span> 
-                                            </td>
-                                            <td class="border-0 pt-3 text-muted">
-                                                <span class="d-none d-md-block">No 4, Ojodu Street, Off Ilasamaja, Ikorodu, Lagos</span> 
-                                            </td>
-                                            <td class="border-0 pt-3">
-                                                <a href="../listings.html" class="btn btn-sm bg-orange text-white px-3">
-                                                    View <span class="d-none d-md-inline">Details</span> 
-                                                </a>
+                                            <td class="border-0 pt-3 green">
+                                                Processing
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="border-0 text-nowrap">
-                                                <img src="../images/dash-thumb.jpg" class="rounded img-responsive mr-2"
-                                                    height="30" width="30" alt="">
-                                                4 Bedroom Flat
+                                            <td class="border-0">
+                                                <img src="../images/dash-thumb.jpg"
+                                                    class="rounded-circle img-responsive mr-2" height="30" width="30"
+                                                    alt="">
+                                                Plazora Villa Rea
                                             </td>
-                                            <td class="border-0 pt-3 text-muted d-none d-md-block">
-                                                <span class="">6 Rooms, 4 Beds, 3 Baths, 245m<sup>2</sup></span> 
-                                            </td>
-                                            <td class="border-0 pt-3 text-muted">
-                                                <span class="d-none d-md-block">No 4, Ojodu Street, Off Ilasamaja, Ikorodu, Lagos</span> 
-                                            </td>
-                                            <td class="border-0 pt-3">
-                                                <a href="../listings.html" class="btn btn-sm bg-orange text-white px-3">
-                                                    View <span class="d-none d-md-inline">Details</span> 
-                                                </a>
+                                            <td class="border-0 pt-3 blue">
+                                                Allocated
                                             </td>
                                         </tr>
 
@@ -230,12 +232,82 @@
                                 </table>
                             </div> <!-- end table-responsive-->
                         </div> <!-- end card-body-->
-                    </div> <!-- end card-->
-
-                </div> <!-- end col-->
-
-                
+                    </div>
+                </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="font-weight-bold mt-2">Allocated Properties</h5>
+
+                            <div class="table-responsive">
+                                <table class="table table-centered nowrap table-hover mb-0 dtr-inline collapsed">
+                                    <thead>
+                                        <tr class="border-top border-bottom">
+                                            <th class="text-muted border-0 py-2 order-0 font-weight-normal">Property
+                                            </th>
+                                            <th class="text-muted border-0 py-2 font-weight-normal d-none d-md-block">
+                                                Details</th>
+                                            <th class="text-muted border-0 py-2 font-weight-normal">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-0 pt-3">
+                                                <img src="../images/dash-thumb.jpg" class="rounded img-responsive mr-2"
+                                                    height="30" width="30" alt="">
+                                                4 Bedroom Flat
+                                                <span class="text-muted d-none d-md-inline"> - Ikeja, Lagos</span>
+                                            </td>
+                                            <td class="border-0 pt-3 text-muted d-none d-md-block">
+                                                6 Rooms, 4 Beds, 3 Baths, 245m<sup>2</sup>
+                                            </td>
+                                            <td class="border-0 pt-3 text-primary">
+                                                $6,518.18
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0">
+                                                <img src="../images/dash-thumb.jpg" class="rounded img-responsive mr-2"
+                                                    height="30" width="30" alt="">
+                                                4 Bedroom Flat
+                                                <span class="text-muted d-none d-md-inline"> - Ikeja, Lagos</span>
+                                            </td>
+                                            <td class="border-0 pt-3 text-muted d-none d-md-block">
+                                                6 Rooms, 4 Beds, 3 Baths, 245m<sup>2</sup>
+                                            </td>
+                                            <td class="border-0 pt-3 text-primary">
+                                                $6,518.18
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0">
+                                                <img src="../images/dash-thumb.jpg" class="rounded img-responsive mr-2"
+                                                    height="30" width="30" alt="">
+                                                4 Bedroom Flat
+                                                <span class="text-muted d-none d-md-inline"> - Ikeja, Lagos</span>
+                                            </td>
+                                            <td class="border-0 pt-3 text-muted d-none d-md-block">
+                                                6 Rooms, 4 Beds, 3 Baths, 245m<sup>2</sup>
+                                            </td>
+                                            <td class="border-0 pt-3 text-primary">
+                                                $6,518.18
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div> <!-- end table-responsive-->
+                        </div> <!-- end card-body-->
+                    </div>
+                </div>
+            </div>
+
+            
+            
         </main>
     </div>
 
@@ -246,6 +318,61 @@
     <script src="../js/popper.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
 
+
+    <!-- Graphs -->
+    <script src="./Chart.min.js"></script>
+
+    <script>
+        var ctx = document.getElementById("myChart");
+        var barChartData = {
+			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+			datasets: [{
+				label: 'Sales',
+				backgroundColor: '#1943EF',
+				data: [ 12, 19, 3, 5, 2, 3, 9 ]
+			}, {
+				label: 'Commission',
+				backgroundColor: '#31bfbf',
+				data: [ 17, 21, 9, 3, 4, 7, 12 ]
+			}, {
+				label: 'Sales Value',
+				backgroundColor: '#ff3a29',
+				data: [ 7, 9, 13, 11, 9, 13, 7 ]
+			}]
+
+		};
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: barChartData,
+            // options: {
+            //     scales: {
+            //         yAxes: [{
+            //             ticks: {
+            //                 beginAtZero: true
+            //             }
+            //         }]
+            //     },
+            // },
+            options: {
+					tooltips: {
+						mode: 'index',
+						intersect: false
+					},
+					responsive: true,
+					scales: {
+						xAxes: [{
+							stacked: true,
+						}],
+						yAxes: [{
+							stacked: true
+						}]
+                    },
+                        legend: {
+                        display: false,
+                    },
+				}
+        });
+    </script>
 </body>
 
 </html>
