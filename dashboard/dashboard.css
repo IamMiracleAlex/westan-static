@@ -63,6 +63,10 @@ body {
 
 .border-orange {border: 1px solid #fc8210 !important;}
 
+.bg-grey {
+    background-color: #EAEAEA !important;
+}
+
 .bg-green {
     background-color: #31bfbf;
 }
