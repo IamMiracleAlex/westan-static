@@ -26,7 +26,14 @@
     
     <!-- dashboard css -->
     <link rel="stylesheet" href="./dashboard.css">
-
+    <style>
+        .pie-img {
+            margin-top: -175px !important;
+        }
+        .pie-img .fa {
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body class="container-fluid">
@@ -150,7 +157,7 @@
                                 <p class="h2 md-h5 font-weight-bold">3.5 Plots</p>
                             </span>
                         </div> 
-                        <!-- end card-body-->
+                        <!-- card footer-->
                         <div class="card-footer border-top bg-white d-flex justify-content-around">
                             <span class="text-center d-block">
                                 <p class="h5 font-weight-bold pb-0 mb-0">12.5M</p>
@@ -172,16 +179,33 @@
 
                 <div class="col-md-4">
                     <div class="card border-0 shadow-sm mb-4 widget-flat">
-                        <div class="card-body d-flex">
-                            <div class="float-left mr-3">
-                                <i class="fa fa-cut p-3 rounded-circle blue bg-light-blue" aria-hidden="true"></i>
+                        <div class="card-body">
+                            <div class="position-relative d-block">
+                                <div class="mx-auto w-75">
+                                    <canvas class="" id="chartCanvas" width="165" height="165" aria-label="Payment Progress" role="img"></canvas>
+                                
+                                </div>
+                                <div class="pie-img position-absolute text-center w-100 mb-5">
+                                    <i class="fa fa-credit-card p-4 rounded-circle orange bg-light-red" aria-hidden="true"></i>
+                                    <p class="h2 font-weight-bold pb-0 mb-0">68.5%</p>
+                                    <p class="grey">Payment Progress</p>
+                                </div>
+                                
                             </div>
-                            <div class="">
-                                <h4 class="mb-0">14 Properties</h4>
-                                <p class="text-nowrap text-muted mb-0">Sales</p>
-                            </div>
-
-                        </div> <!-- end card-body-->
+                        </div>
+                        <!-- card footer-->
+                        <div class="card-footer mt-1 border-top bg-white d-flex justify-content-around">
+                            <span class="text-center d-block">
+                                <p class="grey pb-0 mb-0">Pending Payment</p>
+                                <p class="h5 font-weight-bold">N90,000</p>
+                                
+                            </span>
+                            <div class="bg-grey rounded mt-1" style="width: 1px; height: 36px;"></div>
+                            <span class="text-center d-block pt-1">
+                                <a href="../listings.html" class="col-auto btn bg-orange text-white px-4 ml-3">Pay Now</a>
+                            </span>
+                            
+                        </div>
                     </div> <!-- end card-->
                 </div>
                 
@@ -327,56 +351,54 @@
     <script src="./Chart.min.js"></script>
 
     <script>
-        var ctx = document.getElementById("myChart");
-        var barChartData = {
-			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-			datasets: [{
-				label: 'Sales',
-				backgroundColor: '#1943EF',
-				data: [ 12, 19, 3, 5, 2, 3, 9 ]
-			}, {
-				label: 'Commission',
-				backgroundColor: '#31bfbf',
-				data: [ 17, 21, 9, 3, 4, 7, 12 ]
-			}, {
-				label: 'Sales Value',
-				backgroundColor: '#ff3a29',
-				data: [ 7, 9, 13, 11, 9, 13, 7 ]
-			}]
+        // This demo uses the Chartjs javascript library
+        // Simple yet flexible JavaScript charting for designers & developers
+        // Webite: https://www.chartjs.org
+        // CDN: https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
 
-		};
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: barChartData,
-            // options: {
-            //     scales: {
-            //         yAxes: [{
-            //             ticks: {
-            //                 beginAtZero: true
-            //             }
-            //         }]
-            //     },
-            // },
+        const percent = 84;
+        const color = '#01713c';
+        const canvas = 'chartCanvas';
+        const container = 'chartContainer';
+
+        const percentValue = percent; // Sets the single percentage value
+        const colorGreen = color, // Sets the chart color
+            animationTime = '1400'; // Sets speed/duration of the animation
+
+        const chartCanvas = document.getElementById(canvas), // Sets canvas element by ID
+            chartContainer = document.getElementById(container), // Sets container element ID
+            divElement = document.createElement('div'), // Create element to hold and show percentage value in the center on the chart
+            domString = '<div class="chart__value"><p>' + percentValue + '%</p></div>'; // String holding markup for above created element
+
+        // Create a new Chart object
+        const doughnutChart = new Chart(chartCanvas, {
+            type: 'doughnut', // Set the chart to be a doughnut chart type
+            data: {
+                datasets: [
+                    {
+                        data: [percentValue, 100 - percentValue], // Set the value shown in the chart as a percentage (out of 100)
+                        backgroundColor: ['#FC8210'], // The background color of the filled chart
+                        borderWidth: 0 // Width of border around the chart
+                    }
+                ]
+            },
             options: {
-					tooltips: {
-						mode: 'index',
-						intersect: false
-					},
-					responsive: true,
-					scales: {
-						xAxes: [{
-							stacked: true,
-						}],
-						yAxes: [{
-							stacked: true
-						}]
-                    },
-                        legend: {
-                        display: false,
-                    },
-				}
+                cutoutPercentage: 84, // The percentage of the middle cut out of the chart
+                responsive: true, // Set the chart to not be responsive
+                tooltips: {
+                    enabled: false // Hide tooltips
+                },
+                rotation: 135
+            }
         });
+
+        Chart.defaults.global.animation.duration = animationTime; // Set the animation duration
+
+        divElement.innerHTML = domString; // Parse the HTML set in the domString to the innerHTML of the divElement
+        chartContainer.appendChild(divElement.firstChild); // Append the divElement within the chartContainer as it's child
+
     </script>
+
 </body>
 
 </html>
