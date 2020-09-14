@@ -65,7 +65,7 @@
     </div>
     <div class="row">
         <!-- Sidebar -->
-        <nav id="sidebarMenu" class="sidebar col-md-2 d-md-block py-4 px- bg-white shadow-sm border-right collapse">
+        <nav id="sidebarMenu" class="sidebar d-print-none col-md-2 d-md-block py-4 bg-white shadow-sm border-right collapse">
             <img src="../images/Westan Logo.svg" width="100" alt="" class="img-responsive pl-3">
 
             <div class="sidebar-sticky text-danger pt-5">
@@ -122,7 +122,7 @@
             <div class="py-5 d-block d-md-none"></div>
 
             <!-- Heading and Filters -->
-            <div class="row mb-4 d-flex align-items-end">
+            <div class="row mb-4 d-flex align-items-end d-print-none">
                 <h3 class="col font-weight-bold text-center text-md-left mb-4 mb-md-0">Property Invoice</h3>
                 <div class="col-auto d-none d-md-flex align-items-center">
                     <label class="sr-only" for="inlineFormInputGroup">Search</label>
@@ -143,63 +143,47 @@
             <div class="row mb-5">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body p-2 p-md-5">
 
                             <!-- Invoice Logo-->
-                            <div class="clearfix">
-                                <div class="float-left mb-3">
-                                    <img src="../images/Westan Logo.svg" alt="" height="30">
+                            <div class="clearfix position-relative">
+                                <div class="float-left position-absolute mb-3 d-none d-md-block">
+                                    <img src="../images/Westan Logo.svg" alt="" height="40">
                                 </div>
-                                <div class="float-right">
-                                    <h4 class="m-0 d-print-none">Invoice</h4>
+                                <div class="text-center pt-3 pt-md-0">
+                                    <h2 class="m-0 pb-2 d-print-none font-weight-bold">Westan Realtors (Nig) Ltd</h2>
+                                    <address>Palm Royal Estate,
+                                        Off Ibeju-Lekki,
+                                        Ikeja, Lagos,
+                                        Nigeria.<br>
+                                        <span>Email: contact@westanrealtors.com</span>
+                                    </address>
                                 </div>
                             </div>
 
                             <!-- Invoice Detail-->
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="float-left mt-3">
-                                        <p><b>Hello, Cooper Hobson</b></p>
-                                        <p class="text-muted font-13">Please find below a cost-breakdown for the recent work completed. Please make payment at your earliest convenience, and do not hesitate to contact me with any questions.</p>
-                                    </div>
-
-                                </div><!-- end col -->
-                                <div class="col-sm-4 offset-sm-2">
-                                    <div class="mt-3 float-sm-right">
-                                        <p class="font-13"><strong>Order Date: </strong> &nbsp;&nbsp;&nbsp; Jan 17, 2018</p>
-                                        <p class="font-13"><strong>Order Status: </strong> <span class="badge badge-success float-right">Paid</span></p>
-                                        <p class="font-13"><strong>Order ID: </strong> <span class="float-right">#123456</span></p>
-                                    </div>
-                                </div><!-- end col -->
-                            </div>
-                            <!-- end row -->
-
-                            <div class="row mt-4">
+                            <div class="row mt-4 mt-md-5">
                                 <div class="col-sm-4">
-                                    <h6>Billing Address</h6>
+                                    <h6>Client</h6>
                                     <address>
                                         Lynne K. Higby<br>
                                         795 Folsom Ave, Suite 600<br>
                                         San Francisco, CA 94107<br>
-                                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                                        <span>Phone: (123) 456-7890</span>
                                     </address>
                                 </div> <!-- end col-->
 
-                                <div class="col-sm-4">
-                                    <h6>Shipping Address</h6>
-                                    <address>
-                                        Cooper Hobson<br>
-                                        795 Folsom Ave, Suite 600<br>
-                                        San Francisco, CA 94107<br>
-                                        <abbr title="Phone">P:</abbr> (123) 456-7890
-                                    </address>
+                                <div class="col-sm-4 order-sm-0 text-center pt-auto">
+                                    <h4>Sales Reciept</h4>
                                 </div> <!-- end col-->
 
                                 <div class="col-sm-4">
-                                    <div class="text-sm-right">
-                                        <img src="../images/barcode.png" alt="barcode-image" class="img-fluid mr-2" />
+                                    <div class="float-sm-right">
+                                        <p class="font-13 mb-0">Invoice number</p>
+                                        <p class="h4">AZ-489-P20</p>
+                                        <p class="font-13">Date: &nbsp; Jan 17, 2028</p>
                                     </div>
-                                </div> <!-- end col-->
+                                </div><!-- end col -->
                             </div>    
                             <!-- end row -->        
 
@@ -208,8 +192,8 @@
                                     <div class="table-responsive">
                                         <table class="table mt-4">
                                             <thead>
-                                            <tr><th>#</th>
-                                                <th>Item</th>
+                                            <tr><th>Item</th>
+                                                <th>Description</th>
                                                 <th>Quantity</th>
                                                 <th>Unit Cost</th>
                                                 <th class="text-right">Total</th>
@@ -218,9 +202,11 @@
                                             <tr>
                                                 <td>1</td>
                                                 <td>
-                                                    <b>Laptop</b> <br/>
-                                                    Brand Model VGN-TXN27N/B
-                                                    11.1" Notebook PC
+                                                    Rogue 4 Bedroom Flat, <br/>
+                                                    Palm Royal Estate,
+                                                    Off Ibeju-Lekki,
+                                                    Ikeja, Lagos,
+                                                    Nigeria.
                                                 </td>
                                                 <td>1</td>
                                                 <td>$1799.00</td>
@@ -236,16 +222,6 @@
                                                 <td>3</td>
                                                 <td>$499.00</td>
                                                 <td class="text-right">$1497.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>
-                                                    <b>LED</b> <br/>
-                                                    80cm (32) HD Ready LED TV
-                                                </td>
-                                                <td>2</td>
-                                                <td>$412.00</td>
-                                                <td class="text-right">$824.00</td>
                                             </tr>
 
                                             </tbody>
